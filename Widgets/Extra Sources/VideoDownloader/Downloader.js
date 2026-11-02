@@ -1,9 +1,3 @@
-#!/usr/bin/env node
-
-/**
- * Video Downloader - Instagram | TikTok | YouTube
- * Turkce dil destegi, ora spinnerlar ile profesyonel CLI
- */
 
 import ora from 'ora';
 import chalk from 'chalk';
@@ -13,7 +7,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 import os from 'os';
-import { scrapeComments, printComments } from './Browser.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -403,13 +396,8 @@ async function main() {
 
       const nextIndex = getNextIndex();
 
-      // Önce yorumları çek (Browser.js ile)
-      const platform = detectPlatform(url);
-      const comments = await scrapeComments(url, platform);
-      printComments(comments, platform);
-
-      // Sonra videoyu indir ve kaydet
-      await downloadVideo(url, comments, nextIndex);
+      // Browser.js/yorum çekme bu uygulamada kullanılmaz.
+      await downloadVideo(url, [], nextIndex);
     }
     running = await promptContinue(rl);
   }
