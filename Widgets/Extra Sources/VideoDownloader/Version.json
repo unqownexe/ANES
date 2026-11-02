@@ -1,4 +1,10 @@
 {
     "lastVersion": "1.0.0-Beta",
-    "lastUpdate": "02 November 2026"
+    "lastUpdate": "02 November 2026",
+    "VersionDetails": {
+        "1.0.0-Beta": {
+            "releaseType": "beta",
+            "mandatory": false
+        }
+    }
 }
