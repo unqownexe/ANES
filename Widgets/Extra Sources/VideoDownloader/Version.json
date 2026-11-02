@@ -1,10 +1,12 @@
 {
     "lastVersion": "1.0.0-Beta",
     "lastUpdate": "02 November 2026",
+    "lastUpdTimestamp": "1764652232326",
     "VersionDetails": {
         "1.0.0-Beta": {
             "releaseType": "beta",
-            "mandatory": false
+            "mandatory": false,
+            "updatedAt": 1793652232326
         }
     }
 }
