@@ -1,0 +1,13 @@
+{
+    "lastVersion": "1.0.0-OpenBeta",
+    "lastUpdate": "04 November 2026",
+    "lastUpdTimestamp": "1793794249740",
+    "VersionDetails": {
+        "1.0.0-OpenBeta": {
+            "releaseType": "Open Beta",
+            "mandatory": false,
+            "updatedAt": 1793794249740,
+            "downloadLink": ""
+        }
+    }
+}
