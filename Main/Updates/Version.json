@@ -1,12 +1,12 @@
 {
     "lastVersion": "1.0.0-OpenBeta",
-    "lastUpdate": "04 November 2026",
-    "lastUpdTimestamp": "1793794249740",
+    "lastUpdate": "05 November 2026",
+    "lastUpdTimestamp": "1793874497973",
     "VersionDetails": {
         "1.0.0-OpenBeta": {
             "releaseType": "Open Beta",
             "mandatory": false,
-            "updatedAt": 1793794249740,
+            "updatedAt": 1793874497973,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.0.0.exe"
         }
     }
