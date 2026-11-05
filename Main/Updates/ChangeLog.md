@@ -1,63 +1,23 @@
-# ANES - Changelog 
+# ANES - Changelog
 
 ## 1.1.7 (05 Nov 2026)
 
-Eklenenler:
-  - AI köprüsü sistem açılışında otomatik başlatma, aç/kapat butonu, giriş/çıkış buton durumları ve sohbet ayarlarının gelişmişe taşınması tamamlandı.
+**Eklenenler ve İyileştirmeler:**
+- AI köprüsünün sistem açılışında otomatik başlatılması eklendi.
+- AI köprüsü için açma/kapatma butonu eklendi.
+- Giriş/çıkış buton durumları düzenlendi.
+- Sohbet ayarları Gelişmiş bölümüne taşındı.
 
-## 1.1.6 (05 Nov 2026)
+## 1.0.0 – 1.1.6 (05 Nov 2026)
 
-Eklenenler:
-  - AI kurulumunda Windows Store sahte Python alias'ı engellendi
-
-## 1.1.5 (05 Nov 2026)
-
-Eklenenler:
-  - Yeni diller eklendi
-  - İlk kurulum güncellendi
-  - Birkaç küçük değişiklikler
-  - Maskot değiştirildi
-  - de,en,fa,fr,id,ru,tr dilleri eklendi
-
-## 1.1.4 (05 Nov 2026)
-
-Eklenenler:
-  - Performans iyileştirmeleri
-
-## 1.1.3 (05 Nov 2026)
-
-Eklenenler:
-  - Performans iyileştirmeleri
-
-## 1.1.2 (05 Nov 2026)
-
-Eklenenler:
-  - Performans iyileştirmeleri
-
-## 1.1.0 (05 Nov 2026)
-
-Eklenenler:
-  - Performans iyileştirmeleri
-
-## 1.0.2 (05 Nov 2026)
-
-Eklenenler:
-  - Güncelleme desteği eklendi
-
-## 1.0.1-OpenBeta-HotFix Open Beta (05 Nov 2026)
-
-Eklenenler:
-  - Intro Değiştirildi
-
-## 1.0.0 Open Beta (05 Nov 2026)
-
-Eklenenler:
-  - ANES'in ilk sürümü yayınlandı
-
-
-
-
-
-
-
-
+**Eklenenler, İyileştirmeler ve Düzeltmeler:**
+- ANES'in ilk Open Beta sürümü yayınlandı.
+- Intro ekranı yenilendi.
+- Otomatik güncelleme desteği eklendi.
+- Yazılım güncelleme ekranı geliştirildi.
+- Performans iyileştirmeleri yapıldı.
+- Yeni dil destekleri eklendi (de, en, fa, fr, id, ru, tr).
+- İlk kurulum süreci güncellendi.
+- Maskot değiştirildi.
+- AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
+- Çeşitli küçük düzenlemeler yapıldı.
