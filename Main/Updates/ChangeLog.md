@@ -1,6 +1,6 @@
-# Anes - VideoDownloader 
+# ANES - Changelog 
 
-## 1.0.0 Beta (02 November 2026)
+## 1.0.0 Open Beta (05 Nov 2026)
 
 Eklenenler:
-  - Video Downloader eklentileri eklendi.
+  - ANES'in ilk sürümü yayınlandı
