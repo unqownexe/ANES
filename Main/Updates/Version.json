@@ -1,13 +1,26 @@
 {
-    "lastVersion": "1.0.0-OpenBeta",
+    "lastVersion": "1.0.2",
     "lastUpdate": "05 November 2026",
-    "lastUpdTimestamp": "1793874497973",
+    "lastUpdTimestamp": "1793880556312",
     "VersionDetails": {
         "1.0.0-OpenBeta": {
             "releaseType": "Open Beta",
             "mandatory": false,
             "updatedAt": 1793874497973,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.0.0.exe"
+        },
+        "1.0.1-OpenBeta-HotFix": {
+            "releaseType": "Open Beta",
+            "mandatory": false,
+            "updatedAt": 1793880063886,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.0.1-OpenBeta-HotFix.exe"
+        },
+        "1.0.2": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1793880556312,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.0.2.exe",
+            "description": "Güncelleme desteği"
         }
     }
 }
