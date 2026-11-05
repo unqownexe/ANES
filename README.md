@@ -24,5 +24,5 @@ Windows cihazının ekranının üstünde yaşayan akıllı, rahatsız etmeyen v
 ---
 
 <p align="center">
-  **ANES - Her şey elinin altında.**
+  ANES - Her şey elinin altında.
 </p>
