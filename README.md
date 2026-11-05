@@ -2,6 +2,10 @@
 
 Windows cihazının ekranının üstünde yaşayan akıllı, rahatsız etmeyen ve kullanışlı bir çentik.
 
+
+Kullanımın yer aldığı küçük bir video; https://youtu.be/c6XvJSs2g0c
+
+
 ### ✨ Başlıca Özellikler
 
 - **Video İndirme:** Instagram, TikTok ve YouTube üzerinden istediğin videoyu saniyeler içerisinde indir.
