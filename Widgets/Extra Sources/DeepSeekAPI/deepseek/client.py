@@ -1,0 +1,448 @@
+"""
+Pure-HTTP DeepSeek chat client.
+
+Speaks chat.deepseek.com's internal API directly using a captured signed-in
+session (see `deepseek.auth`). For each message it:
+
+    1. creates a chat session   (POST /api/v0/chat_session/create)
+    2. fetches a PoW challenge   (POST /api/v0/chat/create_pow_challenge)
+    3. solves it via the WASM    (deepseek.pow.DeepSeekPow)
+    4. POSTs the completion       with the x-ds-pow-response header
+    5. parses the SSE stream      into text
+
+    from deepseek.auth import get_session
+    from deepseek.client import DeepSeekClient
+
+    client = DeepSeekClient(get_session())
+    print(client.chat("Hello!"))                 # full reply
+    for chunk in client.stream("Tell a joke"):   # streamed
+        print(chunk, end="", flush=True)
+"""
+
+from __future__ import annotations
+
+import json
+import threading
+from dataclasses import dataclass
+from datetime import datetime
+from typing import Iterator, Optional
+
+import httpx
+
+from .auth import Session, get_session
+from .pow import DeepSeekPow
+
+BASE = "https://chat.deepseek.com"
+COMPLETION_PATH = "/api/v0/chat/completion"
+
+# DeepSeek's mode pill, sent as `model_type` in the completion body. "default" is
+# Instant (the fast model); "expert" is the stronger, slower model. Omitting the
+# field lets the backend pick, so we always send one explicitly.
+DEFAULT_MODEL_TYPE = "default"
+
+# Fragment types in the completion stream: DeepThink reasoning vs. the reply.
+THINK = "THINK"
+RESPONSE = "RESPONSE"
+
+# Envelope `code` DeepSeek returns (with HTTP 200) when the bearer token is
+# rejected: {"code":40003,"msg":"Authorization Failed (invalid token)"}.
+_AUTH_ERROR_CODES = {40003}
+
+# A conversation_id is an opaque "<chat_session_id>:<last_message_id>" token. It
+# carries everything needed to resume a thread, so the client stays stateless.
+_CID_SEP = ":"
+
+
+def _encode_cid(session_id: str, message_id: Optional[int]) -> str:
+    if message_id is None:
+        return session_id
+    return f"{session_id}{_CID_SEP}{message_id}"
+
+
+def _decode_cid(conversation_id: Optional[str]) -> tuple[Optional[str], Optional[int]]:
+    """Split a conversation_id back into (chat_session_id, parent_message_id)."""
+    if not conversation_id:
+        return None, None
+    session_id, _, msg = conversation_id.partition(_CID_SEP)
+    parent = int(msg) if msg.isdigit() else None
+    return (session_id or None), parent
+
+
+@dataclass
+class Reply:
+    """A completed chat reply plus the id to resume the conversation.
+    `reasoning` holds the DeepThink text (empty unless `thinking` was on)."""
+
+    text: str
+    conversation_id: str
+    reasoning: str = ""
+
+    def __str__(self) -> str:  # so print(reply) shows the text
+        return self.text
+
+
+@dataclass
+class ChatSession:
+    """A conversation ("chat session") as listed by the account sidebar.
+
+    `id` is the raw chat_session_id — the part of a conversation_id before the
+    ":" separator. `conversation_id` is that same id in the resume-ready form
+    (no trailing message id), so you can pass it straight back to `chat()` /
+    `stream()` to open the thread at its most recent point.
+    """
+
+    id: str
+    title: str
+    created_at: Optional[int] = None
+    updated_at: Optional[int] = None
+    pinned: bool = False
+    model_type: Optional[str] = None
+
+    @property
+    def conversation_id(self) -> str:
+        return _encode_cid(self.id, None)
+
+
+def _biz(data: dict) -> dict:
+    """Unwrap DeepSeek's `data.biz_data` envelope, raising on API-level errors."""
+    if data.get("code") != 0:
+        raise RuntimeError(f"DeepSeek API error: {data.get('msg') or data}")
+    biz = data.get("data", {}).get("biz_data")
+    if biz is None:
+        raise RuntimeError(f"Unexpected response shape: {data}")
+    return biz
+
+
+def _auth_failed(r: httpx.Response) -> bool:
+    """Whether DeepSeek rejected our token (HTTP 401 or an auth error envelope)."""
+    if r.status_code == 401:
+        return True
+    try:
+        return r.json().get("code") in _AUTH_ERROR_CODES
+    except ValueError:
+        return False
+
+
+class DeepSeekClient:
+    def __init__(
+        self,
+        session: Optional[Session] = None,
+        allow_interactive: bool = True,
+    ):
+        # `allow_interactive=False` makes session resolution non-blocking: it
+        # uses a cached/headless session and raises LoginRequired instead of
+        # opening a browser window. The server passes False (see server/api.py).
+        self._allow_interactive = allow_interactive
+        self.session = session or get_session(allow_interactive=allow_interactive)
+        self._session_lock = threading.Lock()
+        self._pow = DeepSeekPow()
+        # The wasmtime Store behind the PoW solver is not reentrant; serialise
+        # access so concurrent server requests don't corrupt it.
+        self._pow_lock = threading.Lock()
+        self._http = httpx.Client(
+            base_url=BASE,
+            headers=self._base_headers(),
+            cookies=self.session.cookies,
+            timeout=httpx.Timeout(120.0, read=300.0),
+        )
+
+    def _base_headers(self) -> dict:
+        return {
+            "authorization": f"Bearer {self.session.token}",
+            "accept": "*/*",
+            "content-type": "application/json",
+            "user-agent": self.session.user_agent,
+            "origin": BASE,
+            "referer": f"{BASE}/",
+            "x-app-version": "2.0.0",
+            "x-client-version": "2.0.0",
+            "x-client-platform": "web",
+            "x-client-locale": "en_US",
+            "x-client-bundle-id": "com.deepseek.chat",
+            "x-client-timezone-offset": str(
+                int(datetime.now().astimezone().utcoffset().total_seconds())
+            ),
+        }
+
+    def refresh_session(self, stale_token: Optional[str] = None) -> None:
+        """Recapture the session from the browser profile, bypassing the cached
+        file, and point the HTTP client at it. Called when DeepSeek rejects the
+        token; `stale_token` lets concurrent callers skip a refresh another
+        thread already did."""
+        with self._session_lock:
+            if stale_token is not None and self.session.token != stale_token:
+                return
+            self.session = get_session(max_age=0, allow_interactive=self._allow_interactive)
+            self._http.headers.update(self._base_headers())
+            self._http.cookies.update(self.session.cookies)
+
+    def _post(self, path: str, body: dict) -> dict:
+        """POST to an API endpoint and unwrap its `biz_data`. If the token was
+        rejected, refresh the session once and retry, so a long-running server
+        survives token expiry without a restart."""
+        token = self.session.token
+        r = self._http.post(path, json=body)
+        if _auth_failed(r):
+            self.refresh_session(stale_token=token)
+            r = self._http.post(path, json=body)
+        r.raise_for_status()
+        return _biz(r.json())
+
+    def _get(self, path: str, params: Optional[dict] = None) -> dict:
+        """GET an API endpoint and unwrap its `biz_data`, refreshing the session
+        once on a rejected token (same recovery as `_post`)."""
+        token = self.session.token
+        r = self._http.get(path, params=params)
+        if _auth_failed(r):
+            self.refresh_session(stale_token=token)
+            r = self._http.get(path, params=params)
+        r.raise_for_status()
+        return _biz(r.json())
+
+    # --- protocol steps -----------------------------------------------------
+
+    def create_chat_session(self) -> str:
+        return self._post("/api/v0/chat_session/create", {})["chat_session"]["id"]
+
+    def list_conversations(self, count: int = 100) -> list["ChatSession"]:
+        """Return the account's saved conversations (the sidebar list), newest
+        first, with each one's id, title and timestamps.
+
+        `count` caps how many are requested from DeepSeek (and how many are
+        returned). Use a conversation's `.conversation_id` to resume it with
+        `chat()` / `stream()`.
+        """
+        biz = self._get(
+            "/api/v0/chat_session/fetch_page",
+            {"count": count, "lte_cursor": None},
+        )
+        sessions = []
+        for s in biz.get("chat_sessions") or []:
+            sid = s.get("id")
+            if sid is None:
+                continue
+            sessions.append(
+                ChatSession(
+                    id=str(sid),
+                    title=s.get("title") or "",
+                    created_at=s.get("created_at"),
+                    updated_at=s.get("updated_at"),
+                    pinned=bool(s.get("pinned", False)),
+                    model_type=s.get("model_type"),
+                )
+            )
+        return sessions
+
+    def _pow_header(self, target_path: str = COMPLETION_PATH) -> str:
+        challenge = self._post(
+            "/api/v0/chat/create_pow_challenge", {"target_path": target_path}
+        )["challenge"]
+        with self._pow_lock:
+            return self._pow.make_header(challenge)
+
+    # --- public API ---------------------------------------------------------
+
+    def stream(
+        self,
+        prompt: str,
+        conversation_id: Optional[str] = None,
+        model: Optional[str] = None,
+        thinking: bool = False,
+        search: bool = False,
+    ) -> "_Stream":
+        """Stream a reply. Iterate it for text chunks; read `.conversation_id`
+        afterwards to resume the thread. Pass an existing `conversation_id` to
+        continue a previous conversation.
+
+        `model` is DeepSeek's model_type wire value: "default" (Instant) or
+        "expert"; it defaults to "default" on a NEW thread. It cannot be combined
+        with `conversation_id` — a thread's model is fixed when it's created, so
+        resuming keeps the original model. `thinking` enables DeepThink reasoning
+        and `search` enables web search; both are independent of the model.
+        """
+        if conversation_id and model is not None:
+            raise ValueError(
+                "`model` cannot be set together with `conversation_id`; a thread's "
+                "model is fixed when it is created. Pass `model` only on the first turn."
+            )
+        session_id, parent_id = _decode_cid(conversation_id)
+        if session_id is None:
+            # New thread: select the model (default when unspecified).
+            session_id = self.create_chat_session()
+            model_type: Optional[str] = model or DEFAULT_MODEL_TYPE
+        else:
+            # Resuming: let the existing thread's model stand (send no model_type).
+            model_type = None
+        return _Stream(self, prompt, session_id, parent_id, model_type, thinking, search)
+
+    def chat(
+        self,
+        prompt: str,
+        conversation_id: Optional[str] = None,
+        model: Optional[str] = None,
+        thinking: bool = False,
+        search: bool = False,
+    ) -> Reply:
+        """Return the complete reply (`.text`) plus its `.conversation_id`."""
+        s = self.stream(prompt, conversation_id=conversation_id,
+                        model=model, thinking=thinking, search=search)
+        text, reasoning = [], []
+        for kind, chunk in s.events():
+            if kind == RESPONSE:
+                text.append(chunk)
+            elif kind == THINK:
+                reasoning.append(chunk)
+        return Reply(text="".join(text), conversation_id=s.conversation_id,
+                     reasoning="".join(reasoning))
+
+    def close(self) -> None:
+        self._http.close()
+
+
+class _Stream:
+    """Iterable of reply-text chunks (DeepThink reasoning excluded; use
+    `.events()` to get it too). After it's consumed, `.conversation_id` holds
+    the token for resuming the conversation."""
+
+    def __init__(self, client: "DeepSeekClient", prompt: str, session_id: str,
+                 parent_id: Optional[int], model: str,
+                 thinking: bool, search: bool):
+        self._client = client
+        self._prompt = prompt
+        self._session_id = session_id
+        self._parent_id = parent_id
+        self._model = model
+        self._thinking = thinking
+        self._search = search
+        self._message_id: Optional[int] = None
+
+    def __iter__(self) -> Iterator[str]:
+        for kind, text in self.events():
+            if kind == RESPONSE:
+                yield text
+
+    def events(self) -> Iterator[tuple[str, str]]:
+        """Yield `(fragment_type, text)` pairs: THINK for DeepThink reasoning,
+        RESPONSE for the reply, plus any other fragment types DeepSeek sends."""
+        body = {
+            "chat_session_id": self._session_id,
+            "parent_message_id": self._parent_id,
+            "prompt": self._prompt,
+            "ref_file_ids": [],
+            "thinking_enabled": self._thinking,
+            "search_enabled": self._search,
+            "action": None,
+            "preempt": False,
+        }
+        # Only select a model on a new thread; on resume the thread keeps its own.
+        if self._model is not None:
+            body["model_type"] = self._model
+        # PoW challenges are short-lived, so solve right before the request.
+        headers = {"x-ds-pow-response": self._client._pow_header()}
+        meta: dict = {}
+        with self._client._http.stream(
+            "POST", COMPLETION_PATH, json=body, headers=headers
+        ) as resp:
+            resp.raise_for_status()
+            yield from _parse_sse(resp.iter_lines(), meta)
+        if meta.get("message_id") is not None:
+            self._message_id = meta["message_id"]
+
+    @property
+    def conversation_id(self) -> str:
+        return _encode_cid(self._session_id, self._message_id)
+
+
+def _parse_sse(lines, meta: Optional[dict] = None) -> Iterator[tuple[str, str]]:
+    """Turn DeepSeek's SSE completion stream into `(fragment_type, text)` deltas.
+
+    The stream sends an initial snapshot frame whose `v` is the full response
+    object (with `fragments[]`), then a series of patch frames:
+      * {"p":"response/fragments","o":"APPEND","v":[{"type":"THINK","content":"Ok"}]}
+                                                    (starts a new fragment)
+      * {"p":"response/fragments/-1/content","o":"APPEND","v":" what"}  (sets path)
+      * {"v":"'s"}                                                       (appends to it)
+      * {"p":"response","o":"BATCH","v":[{"p":"fragments",...}, ...]}    (several at once)
+    We keep the list of fragment types so each text delta can be labelled THINK
+    (DeepThink reasoning), RESPONSE (the reply) or whatever else DeepSeek sends.
+
+    If `meta` is given, the assistant's `message_id` is recorded into it (used to
+    build the resumable conversation_id). The exact field location can vary, so
+    we look in a few plausible spots defensively.
+    """
+    frag_types: list = []
+    active_path: Optional[str] = None
+
+    def add_fragments(frags) -> Iterator[tuple[str, str]]:
+        for frag in frags or []:
+            if not isinstance(frag, dict):
+                continue
+            kind = frag.get("type") or RESPONSE
+            frag_types.append(kind)
+            if isinstance(frag.get("content"), str) and frag["content"]:
+                yield kind, frag["content"]
+
+    def type_at(path: str) -> str:
+        # "response/fragments/<index>/content" -> that fragment's type. Before
+        # any fragment is known, treat text as reply text.
+        try:
+            return frag_types[int(path.split("/")[-2])]
+        except (ValueError, IndexError):
+            return frag_types[-1] if frag_types else RESPONSE
+
+    def apply(path: str, op: Optional[str], v) -> Iterator[tuple[str, str]]:
+        if op == "BATCH" and isinstance(v, list):
+            for sub in v:
+                if isinstance(sub, dict) and "p" in sub:
+                    yield from apply(f"{path}/{sub['p']}", sub.get("o"), sub.get("v"))
+        elif path.endswith("fragments") and isinstance(v, list):
+            yield from add_fragments(v)
+        elif path.endswith("/content") and isinstance(v, str) and op in (None, "APPEND"):
+            yield type_at(path), v
+        elif path.endswith("message_id") and isinstance(v, int) and meta is not None:
+            meta["message_id"] = v
+
+    for line in lines:
+        if not line or not line.startswith("data:"):
+            continue
+        payload = line[len("data:"):].strip()
+        if not payload or payload == "[DONE]":
+            continue
+        try:
+            obj = json.loads(payload)
+        except json.JSONDecodeError:
+            continue
+
+        v = obj.get("v")
+
+        # Snapshot frame: full response object.
+        if isinstance(v, dict) and "response" in v:
+            if meta is not None:
+                _capture_message_id(meta, v)
+            yield from add_fragments(v["response"].get("fragments"))
+            active_path = "response/fragments/-1/content"
+            continue
+
+        # Path-setting patch frame.
+        if "p" in obj:
+            active_path = obj["p"]
+            yield from apply(active_path, obj.get("o"), v)
+            continue
+
+        # Bare append to the current path.
+        if active_path:
+            yield from apply(active_path, None, v)
+
+
+def _capture_message_id(meta: dict, snapshot: dict) -> None:
+    """Best-effort: pull the assistant message_id out of a snapshot frame.
+
+    DeepSeek nests the assistant message under `response`; we check there first,
+    then the snapshot root, accepting `message_id` or `id`.
+    """
+    for container in (snapshot.get("response"), snapshot):
+        if isinstance(container, dict):
+            mid = container.get("message_id", container.get("id"))
+            if isinstance(mid, int):
+                meta["message_id"] = mid
+                return
