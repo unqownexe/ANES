@@ -6,7 +6,7 @@ Windows cihazının ekranının üstünde yaşayan akıllı, rahatsız etmeyen v
 
 - **Video İndirme:** Instagram, TikTok ve YouTube üzerinden istediğin videoyu saniyeler içerisinde indir.
 - **Şarkı Sözleri:** Dinlediğin şarkının sözlerini senkronize bir şekilde takip et.
-- **Spotlight AI:** Yapay zekâ elinin altında! 1 saniye içerisinde cevap almaya başla.
+- **Spotlight AI:** Yapay zekâ elinin altında! 1 saniye içerisinde cevap almaya başla. (Bir LLM API'ye para vermene gerek yok)
 - **Ekran Süresi:** Bilgisayar başında ne kadar zaman geçirdiğini takip et.
 - **Takvim:** Unutmaman gereken şeyleri kolayca takvimine ekle.
 - **Pano:** Kopyaladığın içeriklere kolayca ulaş.
