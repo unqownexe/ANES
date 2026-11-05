@@ -1,5 +1,14 @@
 # ANES - Changelog 
 
+## 1.1.5 (05 Nov 2026)
+
+Eklenenler:
+  - Yeni diller eklendi
+  - İlk kurulum güncellendi
+  - Birkaç küçük değişiklikler
+  - Maskot değiştirildi
+  - de,en,fa,fr,id,ru,tr dilleri eklendi
+
 ## 1.1.4 (05 Nov 2026)
 
 Eklenenler:
@@ -34,6 +43,7 @@ Eklenenler:
 
 Eklenenler:
   - ANES'in ilk sürümü yayınlandı
+
 
 
 
