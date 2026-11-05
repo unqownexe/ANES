@@ -1,5 +1,10 @@
 # ANES - Changelog 
 
+## 1.1.7 (05 Nov 2026)
+
+Eklenenler:
+  - AI köprüsü sistem açılışında otomatik başlatma, aç/kapat butonu, giriş/çıkış buton durumları ve sohbet ayarlarının gelişmişe taşınması tamamlandı.
+
 ## 1.1.6 (05 Nov 2026)
 
 Eklenenler:
@@ -48,6 +53,7 @@ Eklenenler:
 
 Eklenenler:
   - ANES'in ilk sürümü yayınlandı
+
 
 
 
