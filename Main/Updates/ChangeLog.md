@@ -1,5 +1,10 @@
 # ANES - Changelog 
 
+## 1.1.4 (05 Nov 2026)
+
+Eklenenler:
+  - Performans iyileştirmeleri
+
 ## 1.1.3 (05 Nov 2026)
 
 Eklenenler:
@@ -29,6 +34,7 @@ Eklenenler:
 
 Eklenenler:
   - ANES'in ilk sürümü yayınlandı
+
 
 
 
