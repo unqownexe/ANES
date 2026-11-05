@@ -1,5 +1,10 @@
 # ANES - Changelog 
 
+## 1.1.6 (05 Nov 2026)
+
+Eklenenler:
+  - AI kurulumunda Windows Store sahte Python alias'ı engellendi
+
 ## 1.1.5 (05 Nov 2026)
 
 Eklenenler:
@@ -43,6 +48,7 @@ Eklenenler:
 
 Eklenenler:
   - ANES'in ilk sürümü yayınlandı
+
 
 
 

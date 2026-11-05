@@ -1,7 +1,7 @@
 {
-    "lastVersion": "1.1.5",
+    "lastVersion": "1.1.6",
     "lastUpdate": "05 November 2026",
-    "lastUpdTimestamp": "1793889538919",
+    "lastUpdTimestamp": "1793890427689",
     "VersionDetails": {
         "1.0.0-OpenBeta": {
             "releaseType": "Open Beta",
@@ -56,6 +56,13 @@
             "updatedAt": 1793889538919,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.1.5.exe",
             "description": "Çeşitli güncellemeler"
+        },
+        "1.1.6": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1793890427689,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.1.6.exe",
+            "description": "AI kurulumunda Windows Store sahte Python alias'ı engellendi"
         }
     }
 }
