@@ -1,5 +1,18 @@
 # ANES - Changelog 
 
+## 1.5.0 (07 Nov 2026)
+
+Eklenenler:
+  - Ayarlar penceresi açılırken yaşanan donma/kasma sorunu giderildi.
+  - Dosya dönüştürücü araçlarının indirme sonrası otomatik kurulmaması sorunu giderildi; araçlar artık indirme tamamlandığında kuruluyor.
+  - Çökme durumlarında artık ayrıntılı log kaydı tutuluyor; çökme nedeni (hata kodu, çağrı yığını, son işlemler) log dosyasına yazılıyor.
+  - Windows 11'de "Windows ile başlat" seçeneği açık olmasına rağmen uygulamanın başlamaması sorunu giderildi (Windows 10 ile uyumlu başlangıç kaydı mekanizması Windows 11 ile uyumlu hale getirildi).
+  - Kullanıcı adı "unqown" (büyük/küçük harf duyarsız) olduğunda güncelleme indirmesi devre dışı bırakıldı.
+  - Türkçe karakter içeren veya OneDrive ile yönlendirilmiş kullanıcı profillerinde ayarlar, pano (clipboard) ve diğer kullanıcı verilerinin her açılışta silinmesi sorunu giderildi; yol/karakter kodlaması kaynaklı veri kaybı düzeltildi.
+  - YouTube Shorts/video oynatımı sırasında yaşanan çökme giderildi; sürekli şarkı sözü (lyrics) çekme isteklerinin yol açtığı çökme, istek sıklığı sınırlandırılarak ve hata durumları güvenli şekilde ele alınarak düzeltildi.
+  - Blur görseli oluştururken oluşan `CreateBitmap(blur image) failed 0x80070057` (geçersiz parametre) hatası giderildi; tam ekran/covering modu geçişlerinde blur görselinin tekrar tekrar ve hatalı parametrelerle oluşturulması engellendi (görsel önbelleğe alındı / geçersiz boyutlar doğrulandı).
+  - `screentime.json.tmp` dosyasına yazma hatası giderildi; geçici dosya yazımı ve atomik kaydetme mantığı düzeltildi, eşzamanlı yazma/kilit sorunları giderildi.
+
 ## 1.4.0 (06 Nov 2026)
 
 Eklenenler:
@@ -86,6 +99,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 
