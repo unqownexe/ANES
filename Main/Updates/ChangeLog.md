@@ -20,9 +20,11 @@
   - Ayarlardan kapatılabilir, **varsayılan olarak açık**,
   - Dinlenen medya bilgisi Discord profilinizde görünür.
 
-- **Spotlight AI modu daha da geliştirildi;** (buraya istersen ne geliştirildiğini de ekleyebilirsin — örn. daha hızlı yanıt, daha doğru sonuç, yeni komutlar vb.)
-
-
+- **Spotlight AI modu daha da geliştirildi** 
+  - Artık geçmiş konuşmaları görebilir, devam edebilirsiniz.
+  - Düşünceleri anlık olarak görebilirsiniz vs. vs. 
+  - Birkaç küçük değişiklikler daha yapıldı, ufak tasarımsal.
+  
 ## 1.1.7 (05 Nov 2026)
 
 **Eklenenler ve İyileştirmeler:**
