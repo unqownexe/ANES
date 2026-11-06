@@ -1,5 +1,10 @@
 # ANES - Changelog 
 
+## 1.3.3 (06 Nov 2026)
+
+Eklenenler:
+  - Seni cok ozledim <3
+
 ## 1.3.2 (06 Nov 2026)
 
 Eklenenler:
@@ -72,6 +77,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 
