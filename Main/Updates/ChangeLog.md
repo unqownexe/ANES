@@ -1,5 +1,10 @@
 # ANES - Changelog 
 
+## 1.5.6 (07 Nov 2026)
+
+Eklenenler:
+  - Performans iyileştirmeleri
+
 ## 1.5.5 (07 Nov 2026)
 
 Eklenenler:
@@ -125,6 +130,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 
