@@ -1,5 +1,16 @@
 # ANES - Changelog 
 
+## 1.5.3 (07 Nov 2026)
+
+Eklenenler:
+  - Dosya dönüştürücü araçlarının indirme sonrası otomatik kurulmaması sorunu tekrar giderildi
+  - Ayarlar Güncellemesi
+    - Konum, Sayfalar birleştirildi.
+    - Güncelleştirme ve Hakkında kısmı birleştirildi.
+    - Aktif kategori görünüşü biraz daha değiştirildi.
+    - Ayarlar kasma sorunu giderildi.
+    
+
 ## 1.5.0 (07 Nov 2026)
 
 Eklenenler:
@@ -99,6 +110,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 

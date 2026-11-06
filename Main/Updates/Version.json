@@ -1,7 +1,7 @@
 {
-    "lastVersion": "1.5.0",
+    "lastVersion": "1.5.3",
     "lastUpdate": "07 November 2026",
-    "lastUpdTimestamp": "1793999407566",
+    "lastUpdTimestamp": "1794002557659",
     "VersionDetails": {
         "1.0.0_to_1.1.6": {
             "releaseType": "Open Beta",
@@ -37,6 +37,13 @@
             "updatedAt": 1793999407566,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.5.0.exe",
             "description": "Zorunlu güncelleme"
+        },
+        "1.5.3": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794002557659,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.5.3.exe",
+            "description": "Onu düşünürken yaptığım güncelleme."
         }
     }
 }
