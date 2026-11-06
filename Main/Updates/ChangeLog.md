@@ -1,5 +1,10 @@
 # ANES - Changelog 
 
+## 1.5.3.1 (07 Nov 2026)
+
+Eklenenler:
+  - güncelleme indirmesi artık pill değil OSD
+
 ## 1.5.3 (07 Nov 2026)
 
 Eklenenler:
@@ -110,6 +115,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 
