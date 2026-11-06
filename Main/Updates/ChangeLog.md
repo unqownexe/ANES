@@ -3,7 +3,11 @@
 ## 1.3.3 (06 Nov 2026)
 
 Eklenenler:
-  - Seni cok ozledim <3
+
+  - Spotlight AI inputunda Shift + Enter çalışmama sorunu giderildi
+  - Dosya Dönüştürücü, dosyaları indirirken togglebox'u kapatırsa indirme durmuyordu, artık duruyor.
+  - Ayrıca kapalı olmasına rağmen dosyaları indirmeye çalışıyordu, o giderildi
+  - Ve seni cok ozledim <3
 
 ## 1.3.2 (06 Nov 2026)
 
