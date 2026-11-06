@@ -1,5 +1,16 @@
 # ANES - Changelog 
 
+## 1.2.4 (06 Nov 2026)
+
+Eklenenler:
+  - Drag & Drop tasarımları değişti
+  - ANES Güncelleştirme ekranı artık tam Markdown destekliyor
+  - Artık ANES, güncellemeleri Intro bitmeden kontrol etmiyor
+  - Bir uygulamayı tam ekran yapınca çentik direkt minimize oluyordu, artık ayarlardan bu özellik değiştirilebilir. / Varsayılan: Fareyi götürene kadar çentik açık kalıyor, 15 saniye içinde terkar götürülürse çentik 2 dakikalığına minimize oluyor.
+  - Dosya dönüştürme eklendi (BETA)
+  - Dosya dönüştürme için sağ tık menü için yeni "Dönüştür" kısmı eklendi
+  - Ayarlardaki "Su, Odak" kategorileri birleştirildi; Sağlık
+
 ## 1.2.0 (06 Nov 2026)
 
 - **1 adet yeni medya değiştirme kısayolu eklendi;**
@@ -46,3 +57,4 @@
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
