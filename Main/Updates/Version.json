@@ -1,7 +1,7 @@
 {
-    "lastVersion": "1.1.7",
-    "lastUpdate": "05 November 2026",
-    "lastUpdTimestamp": "1793892237312",
+    "lastVersion": "1.2.0",
+    "lastUpdate": "06 November 2026",
+    "lastUpdTimestamp": "1793970306591",
     "VersionDetails": {
         "1.0.0_to_1.1.6": {
             "releaseType": "Open Beta",
@@ -16,6 +16,13 @@
             "updatedAt": 1793892237312,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.1.7.exe",
             "description": "AI köprüsü sistem açılışında otomatik başlatma, aç/kapat butonu, giriş/çıkış buton durumları ve sohbet ayarlarının gelişmişe taşınması tamamlandı."
+        },
+        "1.2.0": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1793970306591,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.2.0.exe",
+            "description": "Çeşitli güncellemeler"
         }
     }
 }

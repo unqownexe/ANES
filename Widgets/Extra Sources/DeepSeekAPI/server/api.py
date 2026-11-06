@@ -12,12 +12,13 @@ Point any OpenAI client at http://localhost:8000/v1 :
 
 Endpoints:
     GET  /v1/models
-    GET  /v1/conversations      (the account's saved conversations)
-    POST /v1/chat/completions   (stream=true supported)
-    GET  /healthz
+    GET  /v1/conversations                          (the account's saved conversations)
+    GET  /v1/conversations/{conversation_id}/messages  (a conversation's history)
+    POST /v1/chat/completions                       (stream=true supported)
+    GET  /healthz, /health
 
 Requests under /v1 are rate limited per client IP (default 30/min, set via
-RATE_LIMIT_PER_MINUTE); /healthz is exempt.
+RATE_LIMIT_PER_MINUTE); the health checks are exempt.
 """
 
 from __future__ import annotations
@@ -30,7 +31,7 @@ from fastapi.responses import JSONResponse, StreamingResponse
 from starlette.concurrency import run_in_threadpool
 
 from deepseek.auth import LoginRequired
-from deepseek.client import ChatSession, DeepSeekClient
+from deepseek.client import ChatSession, DeepSeekClient, Message
 
 from .config import (
     MODEL_MAP,
@@ -88,7 +89,12 @@ def _error(message: str, status: int = 500, err_type: str = "server_error"):
     )
 
 
+# Health check, served at both paths: `/healthz` is the conventional name used
+# throughout this project, while some clients/probes (and Docker/K8s defaults)
+# call `/health`. Both are cheap, rate-limit exempt (only /v1 is limited) and
+# never touch the DeepSeek session, so they stay green even when logged out.
 @app.get("/healthz")
+@app.get("/health")
 def healthz():
     return {"status": "ok"}
 
@@ -145,6 +151,53 @@ async def list_conversations(
     return {
         "object": "list",
         "data": [_conversation_obj(c) for c in conversations],
+    }
+
+
+def _message_obj(m: Message) -> dict:
+    """One history message, OpenAI-shaped (`role` + `content`)."""
+    obj = {
+        "id": m.id,
+        "object": "message",
+        "role": m.role,
+        "content": m.content,
+        "created_at": m.created_at,
+    }
+    if m.reasoning:
+        obj["reasoning_content"] = m.reasoning
+    return obj
+
+
+@app.get("/v1/conversations/{conversation_id}/messages")
+async def get_conversation_messages(conversation_id: str):
+    """Return the full message history of one conversation, oldest first.
+
+    `conversation_id` is a chat session id from /v1/conversations (a full
+    "<session>:<message>" token also works). Each message is OpenAI-shaped
+    (`role` + `content`), with DeepThink text in `reasoning_content` when present.
+    """
+    try:
+        client = await run_in_threadpool(get_client)
+    except LoginRequired as e:
+        return _error(str(e), status=503, err_type="login_required")
+    except Exception as e:  # session/login failure
+        return _error(f"Failed to initialise DeepSeek session: {e}")
+
+    try:
+        messages = await run_in_threadpool(
+            client.get_conversation_history, conversation_id
+        )
+    except ValueError as e:
+        return _error(str(e), status=400, err_type="invalid_request_error")
+    except LoginRequired as e:
+        return _error(str(e), status=503, err_type="login_required")
+    except Exception as e:
+        return _error(f"DeepSeek request failed: {e}")
+
+    return {
+        "object": "list",
+        "conversation_id": conversation_id,
+        "data": [_message_obj(m) for m in messages],
     }
 
 

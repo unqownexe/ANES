@@ -1,4 +1,27 @@
-# ANES - Changelog
+# ANES - Changelog 
+
+## 1.2.0 (06 Nov 2026)
+
+- **1 adet yeni medya değiştirme kısayolu eklendi;**
+  - Çentiğe (Notch) **CTRL** basılı tutarken:
+    - **Sol tık:** Şarkıyı durdur / devam ettir,
+    - **Sola kaydır:** Önceki şarkıya geç,
+    - **Sağa kaydır:** Sonraki şarkıya geç,
+    - **Scroll (tekerlek):** Ses düzeyini ayarla.
+  - Kısayollar çentik üzerinde çalışır; ekstra pencere açmadan hızlı kontrol sağlar.
+  - Mevcut medya kısayollarıyla çakışma olmaması için yalnızca CTRL basılıyken devreye girer.
+
+- **YouTube sekmesi kapatıldığında "arka planda çalıyor" hatası giderildi;**
+  - Sekme kapatıldıktan sonra medya durumunun yanlışlıkla "çalıyor" olarak algılanması düzeltildi,
+  - Çentikte/medya kontrolünde hayalet "şu an çalıyor" göstergesi artık görünmüyor,
+  - Arka plan medya algılama mantığı sekmeye özel hale getirildi; kapalı sekmeler takip edilmiyor.
+
+- **Discord Rich Presence (RPC) eklendi;**
+  - Ayarlardan kapatılabilir, **varsayılan olarak açık**,
+  - Dinlenen medya bilgisi Discord profilinizde görünür.
+
+- **Spotlight AI modu daha da geliştirildi;** (buraya istersen ne geliştirildiğini de ekleyebilirsin — örn. daha hızlı yanıt, daha doğru sonuç, yeni komutlar vb.)
+
 
 ## 1.1.7 (05 Nov 2026)
 

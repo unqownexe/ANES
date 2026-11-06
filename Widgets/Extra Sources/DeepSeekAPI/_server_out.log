@@ -1,0 +1,5 @@
+INFO:     127.0.0.1:60983 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60993 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61004 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61021 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61026 - "GET /v1/conversations/b9d69d0e-dea2-40a2-ac2b-7a07352b3972/messages HTTP/1.1" 200 OK

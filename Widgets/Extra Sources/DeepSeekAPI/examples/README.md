@@ -25,6 +25,7 @@ Start the server first in another terminal: `python app.py`
 | [05_server_stream.py](05_server_stream.py) | Streaming over Server-Sent Events |
 | [06_server_openai_sdk.py](06_server_openai_sdk.py) | The official `openai` SDK (`pip install openai`) |
 | [07_server_conversations.py](07_server_conversations.py) | List your saved conversations (`GET /v1/conversations`) |
+| [08_server_conversation_history.py](08_server_conversation_history.py) | Print one conversation's history by id (`GET /v1/conversations/{id}/messages`) |
 
 The server limits requests per client IP (default 30/min, set via
 `RATE_LIMIT_PER_MINUTE`); over the limit you get HTTP `429` with a `Retry-After`

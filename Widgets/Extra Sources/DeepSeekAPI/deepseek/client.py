@@ -103,6 +103,22 @@ class ChatSession:
         return _encode_cid(self.id, None)
 
 
+@dataclass
+class Message:
+    """One message in a saved conversation's history.
+
+    `role` is normalised to OpenAI's "user" / "assistant". `reasoning` holds the
+    DeepThink text when the reply used it (empty otherwise). Messages come back
+    in chronological order (oldest first).
+    """
+
+    id: Optional[int]
+    role: str
+    content: str
+    reasoning: str = ""
+    created_at: Optional[int] = None
+
+
 def _biz(data: dict) -> dict:
     """Unwrap DeepSeek's `data.biz_data` envelope, raising on API-level errors."""
     if data.get("code") != 0:
@@ -232,6 +248,42 @@ class DeepSeekClient:
                 )
             )
         return sessions
+
+    def get_conversation_history(self, conversation_id: str) -> list["Message"]:
+        """Return the full message history of a saved conversation, oldest first.
+
+        `conversation_id` may be a bare chat_session_id (as returned by
+        `list_conversations()[i].id`) or a full "<session>:<message>" token — only
+        the session part is used. Pass one of these to `chat()` / `stream()` to
+        continue the thread afterwards.
+        """
+        session_id, _ = _decode_cid(conversation_id)
+        if session_id is None:
+            raise ValueError("conversation_id must include a chat session id")
+
+        biz = self._get(
+            "/api/v0/chat/history_messages",
+            {"chat_session_id": session_id},
+        )
+
+        messages: list[Message] = []
+        for m in biz.get("chat_messages") or []:
+            if not isinstance(m, dict):
+                continue
+            role = str(m.get("role") or "").lower()
+            if role not in ("user", "assistant"):
+                # Fall back to DeepSeek's numeric enum (1=user, 2=assistant).
+                role = {1: "user", 2: "assistant"}.get(m.get("role"), role)
+            messages.append(
+                Message(
+                    id=m.get("message_id", m.get("id")),
+                    role=role,
+                    content=m.get("content") or _fragments_text(m, RESPONSE),
+                    reasoning=m.get("thinking_content") or _fragments_text(m, THINK),
+                    created_at=m.get("inserted_at", m.get("created_at")),
+                )
+            )
+        return messages
 
     def _pow_header(self, target_path: str = COMPLETION_PATH) -> str:
         challenge = self._post(
@@ -432,6 +484,21 @@ def _parse_sse(lines, meta: Optional[dict] = None) -> Iterator[tuple[str, str]]:
         # Bare append to the current path.
         if active_path:
             yield from apply(active_path, None, v)
+
+
+def _fragments_text(message: dict, kind: str) -> str:
+    """Join the text of a history message's fragments of `kind` (THINK/RESPONSE).
+
+    Saved messages may store their body as a `fragments[]` list instead of a
+    plain `content` string; this reconstructs it for one fragment type.
+    """
+    parts = []
+    for frag in message.get("fragments") or []:
+        if isinstance(frag, dict) and (frag.get("type") or RESPONSE) == kind:
+            text = frag.get("content")
+            if isinstance(text, str):
+                parts.append(text)
+    return "".join(parts)
 
 
 def _capture_message_id(meta: dict, snapshot: dict) -> None:
