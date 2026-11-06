@@ -1,5 +1,10 @@
 # ANES - Changelog 
 
+## 1.3.1-HotFix (06 Nov 2026)
+
+Eklenenler:
+  - FFMPEG Kurulumu eklendi
+
 ## 1.3.0 (06 Nov 2026)
 
 Eklenenler:
@@ -62,5 +67,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
+
 
 
