@@ -1,5 +1,10 @@
 # ANES - Changelog 
 
+## 1.6.4 (09 Nov 2026)
+
+Eklenenler:
+  - Custom Dock Kaldırıldı, bir daha eklenmeyecek..
+
 ## 1.6.3 (09 Nov 2026)
 
 Eklenenler:
@@ -200,6 +205,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 
