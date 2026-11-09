@@ -99,21 +99,13 @@
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.6.1.exe",
             "description": "Performans iyileştirmeleri"
         },
-        "1.6.2-BETA": {
-            "releaseType": "Open Beta",
-            "beta": true,
-            "mandatory": false,
-            "updatedAt": 1794247267646,
-            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/beta/Webtelya-ANES-Setup-1.6.2-BETA.exe",
-            "description": "BETA TEST"
-        },
         "1.6.3": {
             "releaseType": "Stable",
             "beta": false,
             "mandatory": true,
             "updatedAt": 1794247820343,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.6.3.exe",
-            "description": "Hızlı Seri Güncelleme"
+            "description": "Artık güncelleme kısmında 'Beta sürümlerini de dahil et'tuşu eklendi, beta özelliklerini erkenden test etmek isteyenler için"
         }
     }
 }

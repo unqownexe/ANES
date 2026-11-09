@@ -3,7 +3,7 @@
 ## 1.6.3 (09 Nov 2026)
 
 Eklenenler:
-  - Performans iyileştirmeleri
+  - Artık güncelleme kısmında "Beta sürümlerini de dahil et" tuşu eklendi, beta özelliklerini erkenden test etmek isteyenler için
 
 ## 1.6.1 (09 Nov 2026)
 
