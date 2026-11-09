@@ -1,5 +1,20 @@
 # ANES - Changelog 
 
+## 1.6.1 (09 Nov 2026)
+
+**Eklenenler ve İyileştirmeler:**
+  - "Tam ekran davranışı" ve "Büyütme davranışı" artık tamamen bağımsız iki ayar; biri diğerini ezmiyor.
+  - Tam ekran davranışına "Minimal" seçeneği eklendi: Auto / Küçült / Minimal / Gizle.
+  - "Minimal açılma beklemesi" ayarı eklendi (0.3 / 0.6 / 1.0 / 1.6 sn).
+  - Tekrar yaklaşma cezası 30 saniyeye ayarlandı; çentikten ayrıldıktan sonra 15 saniye içinde tekrar yaklaşılırsa çentik 30 saniye minimalde kalıyor.
+  - Çentik sağ tık menüsüne "Minimal ceza: Açık/Kapalı" satırı eklendi; ceza istenirse kapatılabiliyor.
+  - Sağ tık menüsü artık menü dışına tıklanınca kapanıyor.
+  - Tam ekran ve büyütme davranışı satırlarına (i) açıklamaları eklendi.
+  - Yaklaşma bölgesi 250 px'e ayarlandı; çentik fare yaklaşınca daha erken minimal çizgiye iniyor.
+  - Play/Pause geçişi hızlandırıldı (0.14 sn) ve dönme merkezi düzeltildi.
+  - Ayarlar kategorilerinin altındaki kırpma ve kararma giderildi; en alta kaydırıldığında son satır tamamen görünüyor.
+  - Tüm ayar (i) açıklamaları 7 dile çevrildi; bazı açıklamaların dil değişmesine rağmen İngilizce kalması düzeltildi.
+
 ## 1.6.0 (09 Nov 2026)
 
 **Eklenenler ve İyileştirmeler:**
@@ -180,6 +195,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 
