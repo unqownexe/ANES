@@ -1,5 +1,55 @@
 # ANES - Changelog 
 
+## 1.6.0 (09 Nov 2026)
+
+**Eklenenler ve İyileştirmeler:**
+  - Animasyon sistemi baştan yenilendi; hover, basış, açılış/kapanış ve geçişler artık aynı yumuşak hareket dilini kullanıyor.
+  - Sayfa geçişleri yönlü hale getirildi; içerik hedef sayfaya göre soldan veya sağdan kayarak geliyor ve hafif bir büyümeyle yerine oturuyor.
+  - Tüm ekranlarda buton, çip, toggle, segment, slider, menü, toast, tooltip, kart, liste satırı ve metin alanı aynı hover/basış/odak davranışına kavuştu.
+  - Play/Pause ikonları artık çapraz solma ve 90° dönmeyle değişiyor.
+  - Toggle topuzu basılıyken hafifçe uzuyor.
+  - Pano önizlemesindeki kapatma X'i fareyle üzerine gelince 90° dönüyor.
+  - Kopyalama bildirimi tek seferlik yumuşak bir "nabız" ile geri bildirim veriyor.
+  - Silme, ekleme ve kopyalama gibi işlemlerde geçişler daha akıcı ve tutarlı.
+  - Raf, Pano, Yapılacaklar ve Notlar boşken ikonlar hafifçe nefes alıyor; Yapılacaklar ve Notlar'a yönlendirici ikonlar eklendi.
+  - AI köprüsü kapalı veya hata durumundayken kırmızı durum noktası iki salınımlı yayla sallanıyor.
+  - Kapalı çentik, OSD ve pill ekranları tek bir düzene oturtuldu; açılış/kapanış ve içerik geçişleri daha tutarlı.
+  - Ses ve parlaklık çubuğu hover'da yumuşakça kalınlaşıyor; topuz animasyonlu beliriyor.
+  - OSD bildirimlerinde ikon hafif büyüyerek geliyor; uzun metinlerde çentik yatay olarak genişliyor.
+  - Müzik ekranındaki kontrol düğmeleri hover ve basış geri bildirimi kazandı; büyük çal düğmesi cam disk görünümüne kavuştu.
+  - Şarkı başlığı ve sanatçı değişiminde çapraz geçiş eklendi.
+  - Müzik ilerleme çubuğu ve dikey ses çubuğu ortak slider davranışına geçti; hover'da kalınlaşıyor.
+  - Sözler ekranındaki aktif satır vurgusu sadeleştirildi ve daha akıcı hale getirildi.
+  - Spotify cihaz çipi ve menüsünde yumuşak hover geçişleri eklendi.
+  - Home kartlarında yaylı hover ve kenar parlaması eklendi.
+  - Home widget'ları yeniden sıralanırken yumuşak yer değiştirme animasyonu eklendi.
+  - Home kaydırmasında kenarlarda lastik bant etkisi eklendi.
+  - Güncelleme rozeti ve boş durum animasyonları iyileştirildi.
+  - Ayarlar'daki adım düğmeleri ve özel sekmelerde hover/basış geri bildirimi eklendi.
+  - Spotlight arama alanı açılırken yumuşak genişleme animasyonu eklendi.
+  - Spotlight sekme çizgisi seçili sekmeye kayarak geçiyor.
+  - AI sohbet balonlarında giriş animasyonu ve kopyalama mikro-etkileşimi eklendi.
+  - Pano kartlarında yaylı hover ve seçim rozetinde hafif aşma efekti eklendi.
+  - Video kartlarında yaylı hover ve canlı kare önizlemesinde Ken Burns etkisi eklendi.
+  - Raf ekranında seçim, animasyonlu silme, seçim dikdörtgeni, çoklu sürükleme ve boş alan giriş animasyonu iyileştirildi.
+  - DropZone'da seçili çip halesi sadeleştirildi.
+  - Odak ekranında seans noktaları ve büyük sayaçta hane animasyonlu geri sayım eklendi.
+  - Su ekranındaki grafik ve halka geçişleri yaylı hale getirildi.
+  - Yapılacaklar'da tamamlama tiki ve satır hareketleri iyileştirildi.
+  - Takvim açılırken bulunduğu yerden büyüme animasyonu eklendi; seçili gün ve bekleyen görev noktaları belirginleştirildi.
+  - Stats grafiklerinde yaylı giriş animasyonu eklendi.
+  - Maskot göz kırpma ve bakış takibi korunarak çizim maliyeti düşürüldü; yüzen daire çizimi önbelleğe alındı.
+  - Menülerde tek tip yumuşak gölge ve daha tutarlı renk tonları kullanıldı.
+  - Sayısal metinlerde tabular rakamlar sayesinde süre/yüzde değişimlerinde genişlik zıplaması giderildi.
+  - Ayarlar iç boşlukları ve hizalamalar düzenlendi.
+  - "Animasyonları azalt" ve yüksek kontrast modları yeni animasyonlarla uyumlu hale getirildi.
+  - Fırça, gradyan, katman ve metin ölçüm önbellekleriyle animasyonlar sırasında kaynak kullanımı azaltıldı.
+  - Boşta CPU kullanımı düşürüldü; parlaklık yoklaması ve ortam animasyonları sınırlandı.
+  - Spotlight kapanışında oluşan siyah çentik hatası giderildi.
+  - Emoji ve sayı içeren metinlerde taşma/kırpılma sorunları için otomatik sığdırma iyileştirildi.
+
+
+
 ## 1.5.6 (07 Nov 2026)
 
 Eklenenler:
@@ -130,6 +180,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 
