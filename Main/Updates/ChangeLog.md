@@ -1,14 +1,16 @@
 # ANES - Changelog 
 
+## 1.7.2-HotFix (10 Nov 2026)
+
+Eklenenler:
+  - Çıkış cihazını değiştirince dalgalar kayboluyordu.
+
 ## 1.7.1 (10 Nov 2026)
 
 Eklenenler:
   - Bass Algoritması İyileştirildi
 
 ## 1.7.0 (10 Nov 2026) - Spotify v1.0 Release
-=======
-## 1.7.0 (10 Nov 2026) - Spotify v1.0 Release 
->>>>>>> 115dbe3bb81f8c533e87f7f7847c6aa7a4f95c70
 
 Eklenenler:
   - **Spotify video arka planı:** Müzik ve Sözler ekranlarının sağında artık Spotify’ın kısa video arka planları oynuyor. Kenarları yumuşak geçişli; bass vurunca video daha belirgin açılıyor. Şarkı duraklatılınca video yumuşakça  gizleniyor, devam edince geri geliyor. Müzik ile Sözler arasında geçiş yapınca video baştan başlamıyor.
@@ -254,6 +256,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 
