@@ -2,7 +2,7 @@
 
 ## 1.6.4 (09 Nov 2026)
 
-Eklenenler:
+Değişenler:
   - Custom Dock Kaldırıldı, bir daha eklenmeyecek..
 
 ## 1.6.3 (09 Nov 2026)
