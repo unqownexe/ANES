@@ -1,5 +1,10 @@
 # ANES - Changelog 
 
+## 1.7.1 (10 Nov 2026)
+
+Eklenenler:
+  - Bass Algoritması İyileştirildi
+
 ## 1.7.0 (10 Nov 2026) - Spotify v1.0 Release
 
 Eklenenler:
@@ -246,6 +251,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 

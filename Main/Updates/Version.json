@@ -1,7 +1,7 @@
 {
-    "lastVersion": "1.7.0",
+    "lastVersion": "1.7.1",
     "lastUpdate": "10 November 2026",
-    "lastUpdTimestamp": "1794327409210",
+    "lastUpdTimestamp": "1794329282806",
     "VersionDetails": {
         "1.0.0_to_1.1.6": {
             "releaseType": "Open Beta",
@@ -107,6 +107,13 @@
             "updatedAt": 1794327409210,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.7.0.exe",
             "description": "Spotify özelliği v1.0 Release"
+        },
+        "1.7.1": {
+            "releaseType": "Stable",
+            "mandatory": false,
+            "updatedAt": 1794329282806,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.7.1.exe",
+            "description": "S <3� Bass Algoritması İyileştirildi"
         }
     }
 }
