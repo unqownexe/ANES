@@ -1,6 +1,6 @@
 # ANES - Changelog 
 
-## 1.7.0 (10 Nov 2026) - Spotify v1.0 Release
+## 1.7.0 (10 Nov 2026) - Spotify v1.0 Release 
 
 Eklenenler:
   - **Spotify video arka planı:** Müzik ve Sözler ekranlarının sağında artık Spotify’ın kısa video arka planları oynuyor. Kenarları yumuşak geçişli; bass vurunca video daha belirgin açılıyor. Şarkı duraklatılınca video yumuşakça  gizleniyor, devam edince geri geliyor. Müzik ile Sözler arasında geçiş yapınca video baştan başlamıyor.
