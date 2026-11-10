@@ -1,7 +1,7 @@
 {
-    "lastVersion": "1.6.4",
-    "lastUpdate": "09 November 2026",
-    "lastUpdTimestamp": "1794253216656",
+    "lastVersion": "1.7.0",
+    "lastUpdate": "10 November 2026",
+    "lastUpdTimestamp": "1794327409210",
     "VersionDetails": {
         "1.0.0_to_1.1.6": {
             "releaseType": "Open Beta",
@@ -100,6 +100,13 @@
             "updatedAt": 1794253216656,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.6.4.exe",
             "description": "Custom Dock Kaldırıldı, bir daha eklenmeyecek."
+        },
+        "1.7.0": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794327409210,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.7.0.exe",
+            "description": "Spotify özelliği v1.0 Release"
         }
     }
 }

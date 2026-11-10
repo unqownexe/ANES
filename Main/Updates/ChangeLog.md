@@ -1,5 +1,46 @@
 # ANES - Changelog 
 
+## 1.7.0 (10 Nov 2026) - Spotify v1.0 Release
+
+Eklenenler:
+  - **Spotify video arka planı:** Müzik ve Sözler ekranlarının sağında artık Spotify’ın kısa video arka planları oynuyor. Kenarları yumuşak geçişli; bass vurunca video daha belirgin açılıyor. Şarkı duraklatılınca video yumuşakça  gizleniyor, devam edince geri geliyor. Müzik ile Sözler arasında geçiş yapınca video baştan başlamıyor.
+  - **Spotify çalma listesi menüsü:** Müzik ekranındaki Spotify simgesine tıklayınca çalma listeleri açılıyor  seçince çalıyor. Menü açılınca çentik yayla büyüyor, kapanınca eski hâline dönüyor.
+  - **Cihaz seçimi menüsü yenilendi:** Çalma listesi menüsüyle aynı görünüme kavuştu. Tek cihaz olsa da açılıyor, liste her açılışta yenileniyor. Cihaz değiştirince çipte eski ad kalmıyor. Çalma listesi ve cihaz menüleri artık  aynı anda açık kalmıyor.
+  - **Tek şarkı tekrarı:** Spotify’da tekrar tuşuna ikinci kez basınca “1” rozeti görünüyor.
+  - **Daha doğru Spotify hata mesajları:** Premium gerektirmeyen kısıtlamalarda artık yanlış “Premium gerekli”  uyarısı çıkmıyor.
+  - **Yeni Spotify ayarları:**
+    - Şarkı değiştirmeyi Spotify üzerinden veya Windows’un kendi medya kontrolleriyle yapma seçeneği. Windows modunda kapak, şarkı adı, süre ve video arka planı da Windows’tan geliyor.
+    - Çalma listelerini ve cihaz seçiciyi göster/gizle.
+    - Yeni videoları indirme aç/kapa. Kapalıyken internetten yeni video indirilmiyor; varsa diskteki video  oynatılıyor.
+    - Sıradaki şarkıları önceden hazırlama ve kaç şarkı hazırlanacağını seçme. Açıkken sıradaki şarkıların videoları, kapakları ve sözleri arka planda hazırlanıyor.
+    - Video önbellek sınırı.
+    - Tüm yeni ayarlar için (i) açıklamaları ve 7 dilde çeviri.
+  - **Söz araması daha verimli:** Bir şarkı için en fazla 4 kez söz aranıyor. Bulunamazsa 48 saat boyunca aynı şarkı  için tekrar tekrar ağa çıkılmıyor; sonuç doğrudan “bulunamadı” olarak gösteriliyor. Bu bilgi kalıcı tutuluyor.
+  - **Söz bulunamayan video arka planlı şarkılarda daha düzenli ekran:** Sağdaki söz alanı gizleniyor, soldaki şarkı  bilgileri ve kontroller kalıyor; video arka planı sağda görünüyor. Söz bulunamazsa arka planda sessizce tekrar deneniyor, ekran “yükleniyor” görünümüne dönmüyor.
+  - **Söz geçişleri daha akıcı:** Şarkı değişince eski sözler kapak ve şarkı bilgileriyle aynı anda sönüyor. Yeni sözler yüklenirken söz alanı boş kalıyor; sözler hazır olunca animasyonla geliyor. Aynı sözler gereksiz yere tekrar animasyonla yenilenmiyor.
+  - **Sözler çentiği biraz daha büyütüldü:** Alt sayfa noktaları aşağı indi; kontrol düğmeleriyle çakışma azaldı.
+  - **Müzik ilerleme çubuğu düzeltmesi:** Video arka planı açılınca ilerleme çubuğu yayla kısalıyor ve artık yanlış yere sarma yapılmıyor.
+  - **Video arka planı geç gelse bile görünüyor:** Müzik ve Sözler ekranları aynı video kaynağını kullanıyor; video geç indirilirse sonradan otomatik görünüyor.
+  - **Ekran Süresi’ne takvim seçici:** “Bugün” veya gün etiketine basınca geçmiş günleri gösteren şık bir takvim  açılıyor; seçilen günün verileri görüntüleniyor.
+  - **Ayarlar son açık sekmeyi hatırlıyor:** Ayarlar kapatılıp yeniden açılınca son sekme ve kaydırma konumundan  devam ediyor; artık “Genel”e dönmüyor.
+  - **Daha temiz kayıt dosyaları:** Uygulama logları her açılışta silinmiyor; önceki 3 açılışın kaydı ayrıca  saklanıyor.
+
+  **Düzeltmeler:**
+
+  - Video arka planının hiç görünmemesi düzeltildi.
+  - Video arka planının Müzik ve Sözler arasında geçişte baştan başlaması ve geçişlerde takılması giderildi.
+  - Video arka planının duraklatınca tamamen kaybolması yerine yumuşakça gizlenmesi sağlandı; devam edince geri geliyor.
+  - Video arka planının sağ kenarında görünen ince yeşil çizgi giderildi.
+  - Bazı ekran geçişlerinde oluşan görsel bozulma düzeltildi.
+  - Cihaz menüsü açılınca çentiğin arkasının saydamlaşması giderildi; çentik her zaman normal görünüyor.
+  - Cihaz çipine ikinci kez basınca menünün kapanmaması düzeltildi.
+  - Cihaz değiştirdikten sonra çipte eski cihaz adının kalması düzeltildi.
+  - Söz bulunamayan video arka planlı şarkılarda çentiğin bazen daralmaması düzeltildi.
+  - Spotify’da şarkı duraklatılınca uygulamanın bunu geç fark etmesi ve oynat/duraklat düğmesinin gecikmesi giderildi.
+  - Spotify çalarken başka bir medya uygulamasına geçince Spotify ekranının takılı kalması düzeltildi.
+  - Spotify bağlantısı kapalıyken şarkı değiştirme, kapak ve süre bilgilerinin Windows medya kontrollerinden alınması sağlandı.
+  - Uzun süre söz araması yapılması ve gereksiz ağ trafiği azaltıldı.
+
 ## 1.6.4 (09 Nov 2026)
 
 Eklenenler:
@@ -205,6 +246,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 
