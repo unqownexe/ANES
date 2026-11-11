@@ -3,7 +3,8 @@
 # 1.9.0 (11 Kasım 2026)
 
 **Eklenenler & İyileştirmeler:**
--- (1.9.0'ın ChangeLog'unu AI'ye yazdırttım 1.8.0 ile benzer özellikler görülebilir.)
+### (1.9.0'ın ChangeLog'unu AI'ye yazdırttım 1.8.0 ile benzer özellikler görülebilir.)
+
 **Müzik Videoları (BETA)**
 - Müzik ve Sözler ekranlarında artık şarkının resmi klibinden kısa bir kolaj arka planda oynatılabiliyor. Özellik varsayılan olarak **kapalı**; Ayarlar > Müzik ve Sözler > **Video (BETA)** bölümünden açılıyor.
 - Şarkı Spotify dışı bir kaynaktan (YouTube, Chrome vb.) çalıyorsa ANES şarkıyı Spotify'da arıyor. Önce Spotify'ın kendi Canvas videosu varsa onu indiriyor; yoksa YouTube'da resmi klibi bulup indiriyor.
