@@ -1,5 +1,21 @@
 # ANES - Changelog 
 
+## 1.8.0 (11 Nov 2026)
+
+Eklenenler & Düzeltilenler:
+  - Ciddi Performans Kaybı için Güncelleme; boştayken bile %10~ CPU / %15~ GPU Kullanımı güncellendi
+  ## Video indirme üzerine değişiklikler
+    - Eğer 5 ten fazla sıra varsa çentik boş yere büyük kalıyordu, artık kalmıyor.
+    - Eğer 5 ten fazla sıra varsa Playlist mi indirilsin, video mu diye sormuyordu (Maks sıra 5'ten sınırsıza çekildi.)
+    - Videoları teker teker indiriyordu, Rate Limit'e takılmayacak şekilde tekrar güncellendi
+    - Videolar indirilirken ANES kapatılırsa açıldığında kaldığı yerden devam edecek  
+    - Ayarlardaki Aktif indirmeler kısmında bir sürü sıra olmasına rağmen sadece 5 tanesini gösteriyordu; playlist    indiriyorsa kaç tane video kaldığını göstermiyordu.
+    - Ayarlar aktif indirmeler kısmı daha detaylı olarak gösteriliyor.
+    - Bilinen bir Crash sorunu düzeltildi...
+    - Ayarlarda tüm indirmeleri / bir sırayı iptal etme gibi özellikler eklendi.
+    - İndirilen dosyaları tekrar indirme sorunu giderildi.
+    - Playlist tekrar indirilirken playlisti 2 kere indirme sorunu giderildi.
+
 ## 1.7.2-HotFix (10 Nov 2026)
 
 Eklenenler:
@@ -256,6 +272,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 

@@ -1,7 +1,7 @@
 {
-    "lastVersion": "1.7.2-HotFix",
-    "lastUpdate": "10 November 2026",
-    "lastUpdTimestamp": "1794330284179",
+    "lastVersion": "1.8.0",
+    "lastUpdate": "11 November 2026",
+    "lastUpdTimestamp": "1794387881042",
     "VersionDetails": {
         "1.0.0_to_1.1.6": {
             "releaseType": "Open Beta",
@@ -121,6 +121,13 @@
             "updatedAt": 1794330284179,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.7.2-HotFix.exe",
             "description": "Çıkış cihazını değiştirince dalgalar kayboluyordu."
+        },
+        "1.8.0": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794387881042,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.8.0.exe",
+            "description": "Ciddi performans değişikliği"
         }
     }
 }
