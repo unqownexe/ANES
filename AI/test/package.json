@@ -1,0 +1,29 @@
+{
+    "name": "anes-backend-test-cli",
+    "version": "1.0.0",
+    "description": "ANES AI Backend için Node.js tabanlı interaktif CLI test istemcisi (streaming, thinking, web arama).",
+    "private": true,
+    "type": "commonjs",
+    "bin": {
+        "anes-test": "cli.js"
+    },
+    "scripts": {
+        "start": "node cli.js",
+        "think": "node cli.js --thinking --web",
+        "noweb": "node cli.js --no-web",
+        "help": "node cli.js --help",
+        "once": "node cli.js --once"
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "keywords": [
+        "anes",
+        "cli",
+        "llama-cpp",
+        "gguf",
+        "streaming",
+        "thinking"
+    ],
+    "license": "MIT"
+}

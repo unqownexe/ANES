@@ -1,0 +1,14 @@
+# ANES AI Backend bağımlılıkları
+# Kurulum: pip install -r requirements.txt
+#
+# NOT: llama-cpp-python Windows'ta PyPI'da onceden derlenmis wheel olarak
+# bulunmaz; derleme yerine hazir wheel index'leri kullanilir. install.bat bunu
+# otomatik halleder. Manuel kurulum ornekleri:
+#   CPU  : pip install llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+#   CUDA : pip install llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu122
+
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.7.0
+psutil>=5.9.0
+llama-cpp-python>=0.2.90

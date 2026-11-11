@@ -1,0 +1,58 @@
+{
+    "ultra_lowest": {
+        "model": "Qwen3-0.6B-Thinking",
+        "details": "Q4_K_M (Thinking)",
+        "filename": "qwen3-0.6b-q4_k_m.gguf",
+        "download_link": "https://huggingface.co/gvij/qwen3-0.6b-gguf/resolve/main/qwen3-0.6b-q4_k_m.gguf",
+        "download_size_gb": 0.5,
+        "sha256": "3479875d3e4c726f7a20b2181f5e1536aefe9925f284f9ae9997a39a7e0d8dc9"
+    },
+    "lowest": {
+        "model": "LFM2.5-1.2B-Thinking",
+        "details": "i1-IQ2_XS (Thinking)",
+        "filename": "LFM2.5-1.2B-Thinking.i1-IQ2_XS.gguf",
+        "download_link": "https://huggingface.co/mradermacher/LFM2.5-1.2B-Thinking-i1-GGUF/resolve/main/LFM2.5-1.2B-Thinking.i1-IQ2_XS.gguf",
+        "download_size_gb": 0.5,
+        "sha256": ""
+    },
+    "ultra_low": {
+        "model": "MiniCPM5-2B-Thinking-Agentic",
+        "details": "Q4_K_M (Thinking + Agentic)",
+        "filename": "MiniCPM5-2B-Claude-Fable5-1-Thinking-Agentic-Q4_K_M.gguf",
+        "download_link": "https://huggingface.co/GnLOLot/MiniCPM5-2B-Claude-Fable5-1-Thinking-Agentic-GGUF/resolve/main/MiniCPM5-2B-Claude-Fable5-1-Thinking-Agentic-Q4_K_M.gguf",
+        "download_size_gb": 1.5,
+        "sha256": ""
+    },
+    "low": {
+        "model": "Gemma 4 E2B",
+        "details": "IT UD IQ2 M",
+        "filename": "gemma-4-E2B-it-UD-IQ2_M.gguf",
+        "download_link": "https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF/resolve/main/gemma-4-E2B-it-UD-IQ2_M.gguf",
+        "download_size_gb": 2.29,
+        "sha256": "3d95ada2a122c9c0b42803317239b64b262ac9226a307ff895b3d87eec0c2acd"
+    },
+    "medium": {
+        "model": "Gemma 4 E2B",
+        "details": "IT Q4 K M",
+        "filename": "gemma-4-E2B-it-Q4_K_M.gguf",
+        "download_link": "https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF/resolve/main/gemma-4-E2B-it-Q4_K_M.gguf",
+        "download_size_gb": 3.11,
+        "sha256": "057b7c340479f1bd90252f16421a3aba8beba5dcbf18ccfef07c81bc2ce2903c"
+    },
+    "high": {
+        "model": "Gemma 4 E4B",
+        "details": "IT Q4 K M",
+        "filename": "gemma-4-E4B-it-Q4_K_M.gguf",
+        "download_link": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q4_K_M.gguf",
+        "download_size_gb": 4.98,
+        "sha256": "1e9b9cf5a61725d3355d57631904da4c94a5712624bc03da4edfee6dde1be23c"
+    },
+    "ultra_high": {
+        "model": "Gemma 4 12B",
+        "details": "IT Q4 K M",
+        "filename": "gemma-4-12B-it-Q4_K_M.gguf",
+        "download_link": "https://huggingface.co/ShahzebKhoso/gemma-4-12B-it-GGUF/resolve/main/gemma-4-12B-it-Q4_K_M.gguf",
+        "download_size_gb": 6.87,
+        "sha256": "76e3e8ed9c405ec440de2168a50d0f8048a4b1521c921e56f0fd7cc352e7d7f8"
+    }
+}
