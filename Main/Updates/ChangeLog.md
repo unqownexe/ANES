@@ -1,4 +1,11 @@
-# ANES - Changelog 
+# ANES AI - Changelog
+
+## 1.0.0 Open Beta (11 Nov 2026)
+
+Kanal: **beta** Â· Zorunlu: hayÄ±r
+
+Eklenenler & DÃ¼zeltilenler:
+  - Beta
 
 ## 1.8.0 (11 Nov 2026)
 
@@ -272,6 +279,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 
