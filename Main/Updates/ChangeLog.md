@@ -1,12 +1,5 @@
 # ANES AI - Changelog
 
-## 1.0.0 Open Beta (11 Nov 2026)
-
-Kanal: **beta** Â· Zorunlu: hayÄ±r
-
-Eklenenler & DÃ¼zeltilenler:
-  - Beta
-
 ## 1.8.0 (11 Nov 2026)
 
 Eklenenler & Düzeltilenler:
