@@ -1,45 +1,133 @@
 {
-    "schema":  2,
-    "channel":  "beta",
-    "latest":  "1.0.0",
-    "minimumSupported":  "0.0.0",
-    "releasedAt":  "2026-11-11T09:51:00Z",
-    "generatedAt":  1794390660974,
-    "changelog":  "ChangeLog.md",
-    "repository":  {
-                       "owner":  "unqownexe",
-                       "name":  "ANES",
-                       "branch":  "main"
-                   },
-    "releases":  {
-                     "1.0.0":  {
-                                   "version":  "1.0.0",
-                                   "channel":  "beta",
-                                   "releaseType":  "Open Beta",
-                                   "beta":  true,
-                                   "mandatory":  false,
-                                   "minFrom":  "0.0.0",
-                                   "title":  "Beta",
-                                   "description":  "Beta",
-                                   "releasedAt":  "2026-11-11T09:51:00Z",
-                                   "timestamp":  1794390660974,
-                                   "changes":  [
-                                                   "Beta"
-                                               ],
-                                   "archive":  "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/ANES-AI-Backend-1.0.0.zip",
-                                   "sha256":  "899bad68d2672ce002cecb18c5eb4f0036513a9925e877d58f5da345c0acc328",
-                                   "files":  [
-
-                                             ],
-                                   "postUpdate":  {
-                                                      "commands":  [
-
-                                                                   ],
-                                                      "pip":  [
-
-                                                              ],
-                                                      "message":  ""
-                                                  }
-                               }
-                 }
+    "lastVersion": "1.8.0",
+    "lastUpdate": "11 November 2026",
+    "lastUpdTimestamp": "1794387881042",
+    "VersionDetails": {
+        "1.0.0_to_1.1.6": {
+            "releaseType": "Open Beta",
+            "mandatory": false,
+            "updatedAt": 1793874497973,
+            "downloadLink": "İlgili sürümler artık kullanılabilir değil",
+            "description": "1.0.0 - 1.1.6 Arası sürümler kaldırıldı."
+        },
+        "1.1.7_to_1.3.2": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1793892237312,
+            "downloadLink": "İlgili sürümler artık kullanılabilir değil",
+            "description": "1.1.7 - 1.3.2 Arası sürümler kaldırıldı."
+        },
+        "1.3.3": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1793990370880,
+            "downloadLink": "İlgili sürüm artık kullanılabilir değil",
+            "description": "Seni cok ozledim <3"
+        },
+        "1.4.0": {
+            "releaseType": "Stable",
+            "mandatory": false,
+            "updatedAt": 1793991767140,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.4.0.exe",
+            "description": "Dosya Dönüştürme dosyalarının indirildiği sunucu değişikliğe uğradı"
+        },
+        "1.5.0": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1793999407566,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.5.0.exe",
+            "description": "Zorunlu güncelleme"
+        },
+        "1.5.3": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794002557659,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.5.3.exe",
+            "description": "Onu düşünürken yaptığım güncelleme."
+        },
+        "1.5.3.1": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794003190704,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.5.3.1.exe",
+            "description": "güncelleme indirmesi artık pill değil OSD"
+        },
+        "1.5.4": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794003695167,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.5.4.exe",
+            "description": "Güncellemeyi sürekli indirip kurma sorunu giderildi - HotFix"
+        },
+        "1.5.5": {
+            "releaseType": "Stable",
+            "mandatory": false,
+            "updatedAt": 1794005745545,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.5.5.exe",
+            "description": "Performans iyileştirmeleri"
+        },
+        "1.5.6": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794007018292,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.5.6.exe",
+            "description": "Performans iyileştirmeleri"
+        },
+        "1.6.0": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794232454933,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.6.0.exe",
+            "description": "1.6.0 - Release"
+        },
+        "1.6.1": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794236180089,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.6.1.exe",
+            "description": "Performans iyileştirmeleri"
+        },
+        "1.6.3": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794247820343,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.6.3.exe",
+            "description": "Artık güncelleme kısmında 'Beta sürümlerini de dahil et'tuşu eklendi, beta özelliklerini erkenden test etmek isteyenler için"
+        },
+        "1.6.4": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794253216656,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.6.4.exe",
+            "description": "Custom Dock Kaldırıldı, bir daha eklenmeyecek."
+        },
+        "1.7.0": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794327409210,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.7.0.exe",
+            "description": "Spotify özelliği v1.0 Release"
+        },
+        "1.7.1": {
+            "releaseType": "Stable",
+            "mandatory": false,
+            "updatedAt": 1794329282806,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.7.1.exe",
+            "description": "S <3� Bass Algoritması İyileştirildi"
+        },
+        "1.7.2-HotFix": {
+            "releaseType": "Hot Fix",
+            "mandatory": false,
+            "updatedAt": 1794330284179,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.7.2-HotFix.exe",
+            "description": "Çıkış cihazını değiştirince dalgalar kayboluyordu."
+        },
+        "1.8.0": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794387881042,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.8.0.exe",
+            "description": "Ciddi performans değişikliği"
+        }
+    }
 }
