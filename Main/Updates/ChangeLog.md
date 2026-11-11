@@ -1,4 +1,49 @@
-# ANES AI - Changelog
+# ANES - Changelog 
+
+# 1.9.0 (11 Kasım 2026)
+
+**Eklenenler & İyileştirmeler:**
+-- (1.9.0'ın ChangeLog'unu AI'ye yazdırttım 1.8.0 ile benzer özellikler görülebilir.)
+**Müzik Videoları (BETA)**
+- Müzik ve Sözler ekranlarında artık şarkının resmi klibinden kısa bir kolaj arka planda oynatılabiliyor. Özellik varsayılan olarak **kapalı**; Ayarlar > Müzik ve Sözler > **Video (BETA)** bölümünden açılıyor.
+- Şarkı Spotify dışı bir kaynaktan (YouTube, Chrome vb.) çalıyorsa ANES şarkıyı Spotify'da arıyor. Önce Spotify'ın kendi Canvas videosu varsa onu indiriyor; yoksa YouTube'da resmi klibi bulup indiriyor.
+- İndirilen video tamamen saklanmıyor; baştan, çeyrekten, ortadan, üç çeyrekten ve sondan 5'er saniyelik toplam **~25 saniyelik bir kolaj** üretiliyor. Hem hızlı iniyor hem az yer kaplıyor.
+- **Kalite** (En iyi / 1080p / 720p / 480p / 360p) ve **depolama sınırı** (100-900 MB) seçilebiliyor. Sınır aşılınca en eski videolar otomatik siliniyor.
+- Sadece kapak resminden oluşan **sabit kareli videolar** algılanıyor; bunlar için 25 saniyelik kolaj yerine 2 saniyelik kısa görüntü kullanılıyor.
+- Şarkı adı benzerliği filtresiyle alakasız sonuçlar eleniyor; yanlış şarkının videosu indirilmiyor.
+- Spotify dışı kaynakta şarkı **duraklatılınca video da yumuşakça gizleniyor**, devam edince geri geliyor.
+- Yatay videolar çentik daralırken sol taraftaki bilgilerle çakışmıyor; genişlik videonun oranına göre ayarlanıyor.
+- 1 dakikadan kısa içerikler için video araması yapılmıyor; parça değişince eski arama iptal edilip yeni parça 2 saniye içinde yeniden deneniyor.
+
+**AI Ayarları Yenilendi**
+- DeepSeek bağlantısı tamamen kaldırıldı. Artık **kendi API adresinizi ve API anahtarlarınızı** girebiliyorsunuz.
+- Birden fazla anahtar virgülle girilebiliyor; biri limite takılınca otomatik olarak sıradakine geçiliyor.
+- Model listesi otomatik geliyor, isterseniz kendiniz de yazabiliyorsunuz. **"Test et"** düğmesiyle bağlantıyı hemen deneyebiliyorsunuz.
+
+**Müzik Ekranı Üst Şeridinde Anlık Söz**
+- Müzik ekranı ve ana sayfada, sağ üstteki eq dalgalarının solunda **o anki söz satırı** görünüyor. Satır değişince yumuşak animasyonla yenileniyor.
+- Uzun söz satırı ana sayfada saat/tarih ile çakışmıyor.
+
+**Ses Görselleri Yenilendi**
+- **Bass analizi baştan yazıldı:** Sub-bas (22-60 Hz) ve kick (60-150 Hz) bantları ayrı ayrı ölçülüyor. Dalga artık sadece ses seviyesine değil, gerçek vuruşlara tepki veriyor.
+- Vuruşlar şarkının kendi ritmine göre normalize ediliyor; her şarkıda doğru çalışıyor.
+- **Dalga boyu** basa ve hareketliliğe göre büyüyor; sub-bas vurunca dalga beyaza kayıp parlıyor. Arka plan noktaları kick vuruşunda büyüyüp parlıyor.
+- **Canvas videosu** basa göre açılıyor; yoğun bas bölümlerinde her vuruşta hafif beyaz parlama oluyor.
+- "Aşırı hareketli" ölçümü artık vuruş sayısına göre; hareketli şarkılarda dalga daha canlı, sakin şarkılarda daha sakin.
+
+**Performans ve Ayarlar**
+- Ayarlar > Görünüm > Performans'a **"Kapalı çentik FPS"** eklendi (30 / 45 / 60, varsayılan 30). Kapalı çentikte sadece ortam hareketi varken bu sınır kullanılıyor; CPU/GPU tasarrufu sağlıyor.
+- Tam ekran "gizle" modunda pencere tamamen gizliyken artık kare üretilmiyor; **GPU kullanımı sıfıra** iniyor.
+- **Intro ve outro animasyonları** ayarlardan bağımsız olarak 120 FPS'te çiziliyor (monitör 120 Hz'den yavaşsa monitörün hızında).
+
+**Düzeltmeler:**
+- Aynı uygulamada birden fazla medya oturumu (ör. iki Chrome sekmesi) varsa artık **çalan oturum** seçiliyor; duraklatılmış sekmede takılıp kalmıyor.
+- YouTube gibi tarayıcı oynatıcılarında **ilerleme çubuğu** artık düzgün ilerliyor.
+- Log dosyalarında Türkçe karakter bozulması giderildi; loglar artık tamamen geçerli UTF-8.
+- Canvas beyaz flaşı sözlerin/başlığın saydam kalmasına neden olmuyor.
+- İndirilen BETA Canvas videolarının sağ kenarında görünen yeşil çizgi giderildi.
+- Gerçek Canvas videosu olmayan şarkılarda sözler ekranı boş yere daralmıyor.
+- Yerel kayıtta zaten olan Canvas videoları için tekrar ağa çıkılmıyor.
 
 ## 1.8.0 (11 Nov 2026)
 
@@ -272,6 +317,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 

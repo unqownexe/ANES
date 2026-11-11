@@ -1,7 +1,7 @@
 {
-    "lastVersion": "1.8.0",
+    "lastVersion": "1.9.0",
     "lastUpdate": "11 November 2026",
-    "lastUpdTimestamp": "1794387881042",
+    "lastUpdTimestamp": "1794421017897",
     "VersionDetails": {
         "1.0.0_to_1.1.6": {
             "releaseType": "Open Beta",
@@ -128,6 +128,13 @@
             "updatedAt": 1794387881042,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.8.0.exe",
             "description": "Ciddi performans değişikliği"
+        },
+        "1.9.0": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794421017897,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-1.9.0.exe",
+            "description": "1.9.0'ın ChangeLog'unu AI'ye yazdırttım 1.8.0 ile benzer özellikler görülebilir."
         }
     }
 }
