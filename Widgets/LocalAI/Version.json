@@ -1,0 +1,42 @@
+{
+    "schema": 2,
+    "channel": "beta",
+    "latest": "1.1.0-BETA",
+    "minimumSupported": "0.0.0",
+    "releasedAt": "2026-11-11T10:02:17Z",
+    "generatedAt": 1794391337598,
+    "changelog": "ChangeLog.md",
+    "repository": {
+        "owner": "unqownexe",
+        "name": "ANES",
+        "branch": "main"
+    },
+    "releases": {
+        "1.1.0-BETA": {
+            "version": "1.1.0-BETA",
+            "channel": "beta",
+            "releaseType": "Open Beta",
+            "beta": true,
+            "mandatory": false,
+            "minFrom": "0.0.0",
+            "title": "Otomatik güncelleme sistemi eklendi",
+            "description": "İlk beta: otomatik güncelleme altyapısı ve yeni klasör düzeni",
+            "releasedAt": "2026-11-11T10:02:17Z",
+            "timestamp": 1794391337598,
+            "changes": [
+                "Otomatik güncelleme sistemi eklendi",
+                "Klasör düzeni: app / config / Changes / updater / tools",
+                "Türkçe karakter desteği düzeltildi",
+                "Sürüm adında BETA geçerse otomatik algılanıyor"
+            ],
+            "archive": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Widgets/LocalAI/Downloads/ANES-AI-Backend-1.1.0-BETA.zip",
+            "sha256": "07df79af47e21344f555198638939aae4e625f950fc8176a4a57519db2f002d1",
+            "files": [],
+            "postUpdate": {
+                "commands": [],
+                "pip": [],
+                "message": ""
+            }
+        }
+    }
+}
