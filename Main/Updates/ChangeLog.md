@@ -4,7 +4,19 @@
 
 | | |
 |---|---|
-| **Son Sürüm** | `2.0.1-HotFix` — 12 Kasım 2026 |
+| **Son Sürüm** | `2.1.0-BugFix` — 12 Kasım 2026 |
+
+---
+
+<a id="v2-1-0"></a>
+## 2.1.0-BugFix — 12 Kasım 2026
+
+### Değiştirilenler
+- Minimal Mod hataları giderildi
+- Windows 11'de panoya bir şey eklerken 2 farklı dosya kaydetme sorunu düzeltildi
+- Video İndiricide FFMPEG bulamama sorunu düzeltildi
+- Açık çentiğin etrafında artık görünmez bir alan var, çentik bir anda kapanmıyor
+- Panoya kaydedildi bildirimi geldiğinde fareyi yaklaştırınca çentik açılmama sorunu düzeltildi
 
 ---
 
@@ -507,4 +519,9 @@
 - İlk kurulum süreci güncellendi.
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
+<<<<<<< HEAD
 - Çeşitli küçük düzenlemeler yapıldı.
+=======
+- Çeşitli küçük düzenlemeler yapıldı.
+>>>>>>> d7a3c5a0d7fee5984c4f72e8dfd5efe628e4c987
+

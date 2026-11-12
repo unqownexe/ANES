@@ -1,7 +1,7 @@
 {
-    "lastVersion": "2.0.1-HotFix",
+    "lastVersion": "2.1.0-BugFix",
     "lastUpdate": "12 November 2026",
-    "lastUpdTimestamp": "1794510398741",
+    "lastUpdTimestamp": "1794514384596",
     "VersionDetails": {
         "1.0.0_to_1.1.6": {
             "releaseType": "Open Beta",
@@ -149,6 +149,13 @@
             "updatedAt": 1794510398741,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.0.1-HotFix.exe",
             "description": "Minimal modda CTRL müzik denetimleri hatalı çalışıyordu"
+        },
+        "2.1.0-BugFix": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794514384596,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.1.0-BugFix.exe",
+            "description": "Minimal Mod hataları giderildi; Windows 11'de panoya bir şey eklerken 2 farklı dosya kaydetme sorunu düzeltildi; Video İndiricide FFMPEG bulamama sorunu düzeltildi; Açık çentiğin etrafında artık görünmez bir alan var, çentik bir anda kapanmıyor; Panoya kaydedildi bildirimi geldiğinde fareyi yaklaştırınca çentik açılmama sorunu düzeltildi"
         }
     }
 }
