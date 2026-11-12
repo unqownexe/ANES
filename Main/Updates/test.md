@@ -4,8 +4,6 @@
 
 | | |
 |---|---|
-| **Format** | [Keep a Changelog 1.1.0](https://keepachangelog.com/tr/1.1.0/) |
-| **Sürümleme** | [Semantic Versioning 2.0.0](https://semver.org/lang/tr/) |
 | **Son Sürüm** | `2.0.0` — 12 Kasım 2026 |
 
 **Sürüm türleri:** `Major` · `Minor` · `Patch` · `HotFix` · `Initial`
