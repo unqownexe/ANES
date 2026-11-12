@@ -1,9 +1,45 @@
 # ANES - Changelog 
 
+## 2.0.0 (12 Nov 2026)
+
+Eklenenler:
+## Maskot ve Animasyonlar
+- Maskot artık duruma göre farklı ruh hallerine bürünüyor: bekliyor, düşünüyor, yazıyor, mutlu, üzgün.
+- Göz takibi yumuşatıldı; fare uzaklaşınca göz ortaya dönüyor.
+- Ruh hali değişince maskot küçük bir "pop" yapıyor.
+- Kulaklık ve büyüteç çizimleri yenilendi: mavi gövde, ses dalgaları, notalar, amber saplı büyüteç.
+- Maskotun renkli parçaları artık birlikte sönüyor; tek parça kalmıyor.
+
+## CTRL Komut Modu
+- Kapalı çentikte CTRL basılı tutunca medya kontrol şeridi açılıyor.
+- Şeritte önceki / oynat-duraklat / sonraki düğmeleri var.
+- Şeritte sürüklenebilir ilerleme çubuğu ve geçen/kalan süre gösteriliyor.
+- Çubuğa tıklayınca o konuma atlıyor; sürükleyince canlı takip ediyor.
+- CTRL basılıyken çentik genişliği sabit kalıyor; şarkı değişince küçülmüyor.
+- Şarkı değişince OSD bildirimi gelmiyor; bilgi çentiğin kendi içinde güncelleniyor.
+- Maximize/tam ekran uygulamada hover olmadan CTRL etkinleşmiyor; çentik kendiliğinden büyümüyor.
+- CTRL basılıyken sağa/sola kaydırma önceki/sonraki şarkıya geçiyor.
+
+## Video İndirici
+- Playlist indirmeleri klasörlenebiliyor.
+- Dosya adı biçimi seçilebiliyor (sayı-kanal-başlık / kanal-başlık / başlık).
+- Başarısız indirme 3 kez daha deneniyor.
+- Takılan indirme 180 saniye sonra yeniden başlatılıyor.
+- Panoya alt alta birden çok bağlantı kopyalanınca onay OSD'si çıkıyor.
+- Ayrı günlük dosyası tutuluyor; son 5 çalıştırma saklanıyor.
+- Kapalı çentikte kaç satır indirme gösterileceği ayarlanabiliyor.
+- Çoklu bağlantı ve playlist soruları OSD ile gösteriliyor.
+
+## Medya Düzeltmesi
+- Explorer veya Spotify yeniden başlayınca artık "Müzik yok" görünmüyor; oturum geri gelince normale dönüyor.
+- Parça çalarken başlık bir an boş gelse bile son bilinen bilgiler korunuyor.
+
+
 # 1.9.0 (11 Kasım 2026)
 
 **Eklenenler & İyileştirmeler:**
--- (1.9.0'ın ChangeLog'unu AI'ye yazdırttım 1.8.0 ile benzer özellikler görülebilir.)
+### (1.9.0'ın ChangeLog'unu AI'ye yazdırttım 1.8.0 ile benzer özellikler görülebilir.)
+
 **Müzik Videoları (BETA)**
 - Müzik ve Sözler ekranlarında artık şarkının resmi klibinden kısa bir kolaj arka planda oynatılabiliyor. Özellik varsayılan olarak **kapalı**; Ayarlar > Müzik ve Sözler > **Video (BETA)** bölümünden açılıyor.
 - Şarkı Spotify dışı bir kaynaktan (YouTube, Chrome vb.) çalıyorsa ANES şarkıyı Spotify'da arıyor. Önce Spotify'ın kendi Canvas videosu varsa onu indiriyor; yoksa YouTube'da resmi klibi bulup indiriyor.
@@ -317,6 +353,7 @@ Eklenenler:
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
+
 
 
 
