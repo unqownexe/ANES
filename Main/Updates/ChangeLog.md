@@ -13,7 +13,6 @@
 
 <a id="v2-0-0"></a>
 ## 2.0.0 — 12 Kasım 2026
-`Major` · Kararlı
 
 ### Eklenenler
 
@@ -64,7 +63,6 @@
 
 <a id="v1-9-0"></a>
 ## 1.9.0 — 11 Kasım 2026
-`Minor`
 
 > **Not:** 1.9.0 changelog'u AI'ye yazdırılmıştır; 1.8.0 ile benzer özellikler görülebilir.
 
@@ -115,7 +113,6 @@
 
 <a id="v1-8-0"></a>
 ## 1.8.0 — 11 Kasım 2026
-`Minor`
 
 ### Değiştirilenler
 
@@ -152,7 +149,6 @@
 
 <a id="v1-7-1"></a>
 ## 1.7.1 — 10 Kasım 2026
-`Patch`
 
 ### Değiştirilenler
 - Bass algoritması iyileştirildi.
@@ -160,8 +156,7 @@
 ---
 
 <a id="v1-7-0"></a>
-## 1.7.0 — 10 Kasım 2026
-`Minor` · Spotify v1.0 Release
+## 1.7.0 — 10 Kasım 2026 · Spotify v1.0 Release
 
 ### Eklenenler ve İyileştirmeler
 
@@ -241,7 +236,6 @@
 
 <a id="v1-6-4"></a>
 ## 1.6.4 — 09 Kasım 2026
-`Patch`
 
 ### Kaldırılanlar
 - Custom Dock kaldırıldı; bir daha eklenmeyecek.
@@ -250,7 +244,6 @@
 
 <a id="v1-6-3"></a>
 ## 1.6.3 — 09 Kasım 2026
-`Patch`
 
 ### Eklenenler
 - Güncelleme bölümüne **"Beta sürümlerini de dahil et"** seçeneği eklendi; beta özelliklerini erkenden test etmek isteyenler için.
@@ -259,7 +252,6 @@
 
 <a id="v1-6-1"></a>
 ## 1.6.1 — 09 Kasım 2026
-`Patch`
 
 ### Eklenenler ve İyileştirmeler
 - **"Tam ekran davranışı"** ve **"Büyütme davranışı"** artık tamamen bağımsız iki ayar; biri diğerini ezmiyor.
@@ -278,7 +270,6 @@
 
 <a id="v1-6-0"></a>
 ## 1.6.0 — 09 Kasım 2026
-`Minor`
 
 ### Eklenenler ve İyileştirmeler
 - Animasyon sistemi baştan yenilendi; hover, basış, açılış/kapanış ve geçişler artık aynı yumuşak hareket dilini kullanıyor.
@@ -330,7 +321,6 @@
 
 <a id="v1-5-6"></a>
 ## 1.5.6 — 07 Kasım 2026
-`Patch`
 
 ### Değiştirilenler
 - Performans iyileştirmeleri.
@@ -339,7 +329,6 @@
 
 <a id="v1-5-5"></a>
 ## 1.5.5 — 07 Kasım 2026
-`Patch`
 
 ### Değiştirilenler
 - Performans iyileştirmeleri.
@@ -366,7 +355,6 @@
 
 <a id="v1-5-3"></a>
 ## 1.5.3 — 07 Kasım 2026
-`Patch`
 
 ### Düzeltilenler
 - Dosya dönüştürücü araçlarının indirme sonrası otomatik kurulmaması sorunu tekrar giderildi.
@@ -383,7 +371,6 @@
 
 <a id="v1-5-0"></a>
 ## 1.5.0 — 07 Kasım 2026
-`Minor`
 
 ### Eklenenler
 - Çökme durumlarında artık ayrıntılı log kaydı tutuluyor; çökme nedeni (hata kodu, çağrı yığını, son işlemler) log dosyasına yazılıyor.
@@ -402,7 +389,6 @@
 
 <a id="v1-4-0"></a>
 ## 1.4.0 — 06 Kasım 2026
-`Minor`
 
 ### Değiştirilenler
 - Dosya Dönüştürme dosyalarının indirildiği sunucu değişikliğe uğradı.
@@ -411,7 +397,6 @@
 
 <a id="v1-3-3"></a>
 ## 1.3.3 — 06 Kasım 2026
-`Patch`
 
 ### Düzeltilenler
 - Spotlight AI inputunda **Shift + Enter** çalışmama sorunu giderildi.
@@ -424,7 +409,6 @@
 
 <a id="v1-3-2"></a>
 ## 1.3.2 — 06 Kasım 2026
-`Patch`
 
 ### Değiştirilenler
 - Performans iyileştirmeleri.
@@ -442,7 +426,6 @@
 
 <a id="v1-3-0"></a>
 ## 1.3.0 — 06 Kasım 2026
-`Minor`
 
 ### Eklenenler
 - Dosya Dönüştürücü Release.
@@ -451,7 +434,6 @@
 
 <a id="v1-2-4"></a>
 ## 1.2.4 — 06 Kasım 2026
-`Patch`
 
 ### Eklenenler ve İyileştirmeler
 - Drag & Drop tasarımları değişti.
@@ -466,7 +448,6 @@
 
 <a id="v1-2-0"></a>
 ## 1.2.0 — 06 Kasım 2026
-`Minor`
 
 ### Eklenenler
 
@@ -498,7 +479,6 @@
 
 <a id="v1-1-7"></a>
 ## 1.1.7 — 05 Kasım 2026
-`Patch`
 
 ### Değiştirilenler
 - AI köprüsünün sistem açılışında otomatik başlatılması eklendi.
@@ -510,7 +490,6 @@
 
 <a id="v1-0-0"></a>
 ## 1.0.0 – 1.1.6 — 05 Kasım 2026
-`Initial`
 
 ### Eklenenler, İyileştirmeler ve Düzeltmeler
 - ANES'in ilk Open Beta sürümü yayınlandı.
@@ -523,7 +502,3 @@
 - Maskot değiştirildi.
 - AI kurulumu sırasında Windows Store sahte Python alias'ının kullanılması engellendi.
 - Çeşitli küçük düzenlemeler yapıldı.
-
----
-
-*Bu changelog [Keep a Changelog](https://keepachangelog.com/tr/1.1.0/) formatına göre düzenlenmiştir.*
