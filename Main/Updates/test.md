@@ -2,43 +2,11 @@
 
 > ANES uygulamasının tüm sürüm geçmişi, değişiklikleri ve düzeltmeleri.
 
-| | |
+
 |---|---|
 | **Son Sürüm** | `2.0.0` — 12 Kasım 2026 |
 
 **Sürüm türleri:** `Major` · `Minor` · `Patch` · `HotFix` · `Initial`
-
----
-
-## Sürüm Özeti
-
-| Sürüm | Tarih | Tür | Öne Çıkanlar |
-|---|---|---|---|
-| [2.0.0](#v2-0-0) | 12 Kas 2026 | `Major` | Maskot ruh halleri, CTRL komut modu, video indirici |
-| [1.9.0](#v1-9-0) | 11 Kas 2026 | `Minor` | Müzik videoları (BETA), AI ayarları, ses görselleri |
-| [1.8.0](#v1-8-0) | 11 Kas 2026 | `Minor` | Performans, video indirici düzeltmeleri |
-| [1.7.2-HotFix](#v1-7-2) | 10 Kas 2026 | `HotFix` | Çıkış cihazı değişiminde dalga düzeltmesi |
-| [1.7.1](#v1-7-1) | 10 Kas 2026 | `Patch` | Bass algoritması |
-| [1.7.0](#v1-7-0) | 10 Kas 2026 | `Minor` | Spotify v1.0, video arka planı, çalma listeleri |
-| [1.6.4](#v1-6-4) | 09 Kas 2026 | `Patch` | Custom Dock kaldırıldı |
-| [1.6.3](#v1-6-3) | 09 Kas 2026 | `Patch` | Beta sürüm kanalı |
-| [1.6.1](#v1-6-1) | 09 Kas 2026 | `Patch` | Tam ekran / büyütme davranışları |
-| [1.6.0](#v1-6-0) | 09 Kas 2026 | `Minor` | Animasyon sistemi yenilendi |
-| [1.5.6](#v1-5-6) | 07 Kas 2026 | `Patch` | Performans |
-| [1.5.5](#v1-5-5) | 07 Kas 2026 | `Patch` | Performans |
-| [1.5.4](#v1-5-4) | 07 Kas 2026 | `HotFix` | Güncelleme döngüsü |
-| [1.5.3.1](#v1-5-3-1) | 07 Kas 2026 | `HotFix` | Güncelleme bildirimi OSD |
-| [1.5.3](#v1-5-3) | 07 Kas 2026 | `Patch` | Ayarlar birleştirme |
-| [1.5.0](#v1-5-0) | 07 Kas 2026 | `Minor` | Ayarlar, log, başlatma düzeltmeleri |
-| [1.4.0](#v1-4-0) | 06 Kas 2026 | `Minor` | Dosya dönüştürücü sunucusu |
-| [1.3.3](#v1-3-3) | 06 Kas 2026 | `Patch` | Spotlight AI, dosya dönüştürücü |
-| [1.3.2](#v1-3-2) | 06 Kas 2026 | `Patch` | Performans |
-| [1.3.1-HotFix](#v1-3-1) | 06 Kas 2026 | `HotFix` | FFMPEG kurulumu |
-| [1.3.0](#v1-3-0) | 06 Kas 2026 | `Minor` | Dosya dönüştürücü |
-| [1.2.4](#v1-2-4) | 06 Kas 2026 | `Patch` | Drag & Drop, Markdown, Sağlık kategorisi |
-| [1.2.0](#v1-2-0) | 06 Kas 2026 | `Minor` | CTRL kısayolları, Discord RPC, Spotlight AI |
-| [1.1.7](#v1-1-7) | 05 Kas 2026 | `Patch` | AI köprüsü |
-| [1.0.0 – 1.1.6](#v1-0-0) | 05 Kas 2026 | `Initial` | İlk Open Beta |
 
 ---
 
