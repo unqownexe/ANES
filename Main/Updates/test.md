@@ -3,7 +3,7 @@
 > ANES uygulamasının tüm sürüm geçmişi, değişiklikleri ve düzeltmeleri.
 
 
-|---|---|
+
 | **Son Sürüm** | `2.0.0` — 12 Kasım 2026 |
 
 **Sürüm türleri:** `Major` · `Minor` · `Patch` · `HotFix` · `Initial`
