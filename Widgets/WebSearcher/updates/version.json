@@ -1,0 +1,15 @@
+{
+    "lastVersion": "1.0.0-BugFix",
+    "lastUpdate": "13 November 2026",
+    "lastUpdTimestamp": "1794597455160",
+    "VersionDetails": {
+        "1.0.0": {
+            "releaseType": "Open Beta",
+            "mandatory": false,
+            "updatedAt": 1794597455160,
+            "downloadLink": "",
+            "description": "",
+            "installShell": "npm i"
+        }
+    }
+}
