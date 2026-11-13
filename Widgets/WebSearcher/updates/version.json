@@ -1,13 +1,21 @@
 {
-    "lastVersion": "1.0.0-BugFix",
+    "lastVersion": "1.1.0",
     "lastUpdate": "13 November 2026",
-    "lastUpdTimestamp": "1794597455160",
+    "lastUpdTimestamp": "1794599680807",
     "VersionDetails": {
+        "1.1.0": {
+            "releaseType": "Release",
+            "mandatory": true,
+            "updatedAt": 1794599680807,
+            "downloadLink": "https://raw.githubusercontent.com/unqownexe/ANES/refs/heads/main/Widgets/WebSearcher/downloads/ANES-WebSearch-1.1.0.zip",
+            "description": "Güncelleme desteği getirdik alın indirin",
+            "installShell": "npm i"
+        },
         "1.0.0": {
-            "releaseType": "Open Beta",
+            "releaseType": "First Release",
             "mandatory": false,
             "updatedAt": 1794597455160,
-            "downloadLink": "",
+            "downloadLink": "https://raw.githubusercontent.com/unqownexe/ANES/refs/heads/main/Widgets/WebSearcher/downloads/ANES-WebSearch-1.0.0.rar ",
             "description": "",
             "installShell": "npm i"
         }
