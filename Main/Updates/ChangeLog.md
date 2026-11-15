@@ -4,7 +4,15 @@
 
 | | |
 |---|---|
-| **Son Sürüm** | `2.1.0-BugFix` — 12 Kasım 2026 |
+| **Son Sürüm** | `2.3.0` — 16 Kasım 2026 |
+
+---
+
+<a id="v2-3-0"></a>
+## 2.3.0 — 16 Kasım 2026
+
+### Bölüm Aşk
+- Çok şey eklendi, hepsini yazmaya üşendim keyfim yok
 
 ---
 
@@ -524,4 +532,5 @@
 =======
 - Çeşitli küçük düzenlemeler yapıldı.
 >>>>>>> d7a3c5a0d7fee5984c4f72e8dfd5efe628e4c987
+
 
