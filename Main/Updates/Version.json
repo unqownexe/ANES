@@ -1,7 +1,7 @@
 {
-    "lastVersion": "2.3.1",
-    "lastUpdate": "16 November 2026",
-    "lastUpdTimestamp": "1794821555996",
+    "lastVersion": "2.3.4",
+    "lastUpdate": "17 November 2026",
+    "lastUpdTimestamp": "1794870001854",
     "VersionDetails": {
         "1.0.0_to_1.1.6": {
             "releaseType": "Open Beta",
@@ -170,6 +170,13 @@
             "updatedAt": 1794821555996,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.3.1.exe",
             "description": "Fix işşte"
+        },
+        "2.3.4": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794870001854,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.3.4.exe",
+            "description": "Bug Fix; Yüzen Çentik modundayken Sağ tık Tray Menü açılınca program donuyordu - sorun düzeltildi; AI Web Searcher'in Türkçe karakterli kullanıcı hesabı varsa kurulmuyordu, düzeltildi.; Emin değilim ama kapalı çentikte siyah kalma sorunu düzeltildi sanırım.; Ayarlar güncellendi (Left panel); Web Search'lerde Favicon / Iconları 5mb'ya kadar kaydetme özelliği eklendi; Web Search çok daha iyileştirildi; Web Search 2.0.2 yayınlandı; AI Cevap verirken prompt gönderme sorunu giderildi; Browser Agent Biraz daha geliştirildi (KAPALI BETA); Screens.cpp 28900 satırken,  Dosya / Tasarım güncellemesi daha kolay olsun diye parçalara bölündü; Spotlight AI'nin Playlist'i durduk yere istek atıp alma sorunu çözüldü; Spotlight AI'de Karışık işlerde kullanıcının isteğini tam analiz edip sonra işleme koyma özelliği eklendi"
         }
     }
 }

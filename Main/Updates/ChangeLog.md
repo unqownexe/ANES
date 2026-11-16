@@ -4,7 +4,27 @@
 
 | | |
 |---|---|
-| **Son Sürüm** | `2.3.1` — 16 Kasım 2026 |
+| **Son Sürüm** | `2.3.4` — 17 Kasım 2026 |
+
+---
+
+<a id="v2-3-4"></a>
+## 2.3.4 — 17 Kasım 2026
+
+### ALL IN ONE UPDATE
+- Bug Fix
+- Yüzen Çentik modundayken Sağ tık Tray Menü açılınca program donuyordu - sorun düzeltildi
+- AI Web Searcher'in Türkçe karakterli kullanıcı hesabı varsa kurulmuyordu, düzeltildi.
+- Emin değilim ama kapalı çentikte siyah kalma sorunu düzeltildi sanırım.
+- Ayarlar güncellendi (Left panel)
+- Web Search'lerde Favicon / Iconları 5mb'ya kadar kaydetme özelliği eklendi
+- Web Search çok daha iyileştirildi
+- Web Search 2.0.2 yayınlandı
+- AI Cevap verirken prompt gönderme sorunu giderildi
+- Browser Agent Biraz daha geliştirildi (KAPALI BETA)
+- Screens.cpp 28900 satırken,  Dosya / Tasarım güncellemesi daha kolay olsun diye parçalara bölündü
+- Spotlight AI'nin Playlist'i durduk yere istek atıp alma sorunu çözüldü
+- Spotlight AI'de Karışık işlerde kullanıcının isteğini tam analiz edip sonra işleme koyma özelliği eklendi
 
 ---
 
@@ -542,6 +562,7 @@
 =======
 - Çeşitli küçük düzenlemeler yapıldı.
 >>>>>>> d7a3c5a0d7fee5984c4f72e8dfd5efe628e4c987
+
 
 
 
