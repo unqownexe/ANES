@@ -1,8 +1,16 @@
 {
-    "lastVersion": "1.1.0",
-    "lastUpdate": "13 November 2026",
-    "lastUpdTimestamp": "1794599680807",
+    "lastVersion": "2.0.2",
+    "lastUpdate": "16 November 2026",
+    "lastUpdTimestamp": "1794827890740",
     "VersionDetails": {
+        "2.0.2": {
+            "releaseType": "Release",
+            "mandatory": true,
+            "updatedAt": 1794827890740,
+            "downloadLink": "https://raw.githubusercontent.com/unqownexe/ANES/refs/heads/main/Widgets/WebSearcher/downloads/ANES-WebSearch-2.0.2.zip",
+            "description": "Birkaç küçük değişiklik",
+            "installShell": "npm i"
+        },
         "1.1.0": {
             "releaseType": "Release",
             "mandatory": true,
