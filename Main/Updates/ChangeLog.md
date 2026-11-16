@@ -4,7 +4,17 @@
 
 | | |
 |---|---|
-| **Son Sürüm** | `2.3.0` — 16 Kasım 2026 |
+| **Son Sürüm** | `2.3.1` — 16 Kasım 2026 |
+
+---
+
+<a id="v2-3-1"></a>
+## 2.3.1 — 16 Kasım 2026
+
+### Düzeltilenler
+- Çıkış cihazını değiştirince dalgalar vs hareketi kesiyordu.
+- Yüzen çentikte bilinen problemler giderildi.
+- Müzik ekranındaki dalgaların, arkadaki noktaların ardı ardına gelen bass & kick vuruşlarını kaçırıyordu, sorun düzeltildi.
 
 ---
 
@@ -532,5 +542,6 @@
 =======
 - Çeşitli küçük düzenlemeler yapıldı.
 >>>>>>> d7a3c5a0d7fee5984c4f72e8dfd5efe628e4c987
+
 
 
