@@ -4,7 +4,16 @@
 
 | | |
 |---|---|
-| **Son Sürüm** | `2.3.4` — 17 Kasım 2026 |
+| **Son Sürüm** | `2.3.5` — 17 Kasım 2026 |
+
+---
+
+<a id="v2-3-5"></a>
+## 2.3.5 — 17 Kasım 2026
+
+### Yenilik ve düzeltmeler
+- Sağ tık menünün çentiğin arkasında renderlanma problemi çözüldü.
+- Spotlight AI'ye öneri özelliği eklendi.
 
 ---
 
@@ -562,6 +571,7 @@
 =======
 - Çeşitli küçük düzenlemeler yapıldı.
 >>>>>>> d7a3c5a0d7fee5984c4f72e8dfd5efe628e4c987
+
 
 
 
