@@ -1,7 +1,7 @@
 {
-    "lastVersion": "2.3.5",
-    "lastUpdate": "17 November 2026",
-    "lastUpdTimestamp": "1794947393766",
+    "lastVersion": "2.3.6",
+    "lastUpdate": "18 November 2026",
+    "lastUpdTimestamp": "1794997362861",
     "VersionDetails": {
         "1.0.0_to_1.1.6": {
             "releaseType": "Open Beta",
@@ -184,6 +184,13 @@
             "updatedAt": 1794947393766,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.3.5.exe",
             "description": "Sağ tık menünün çentiğin arkasında renderlanma problemi çözüldü.; Spotlight AI'ye öneri özelliği eklendi."
+        },
+        "2.3.6": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1794997362861,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.3.6.exe",
+            "description": "AI Browser Close Beta'dan çıkarıldı; Şarkı Sözleri çevirme özelliği eklendi; Tasarımsal güncellemeler; AI Haber çekme çok daha hızlandırıldı."
         }
     }
 }

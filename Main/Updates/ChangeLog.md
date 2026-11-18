@@ -4,7 +4,18 @@
 
 | | |
 |---|---|
-| **Son Sürüm** | `2.3.5` — 17 Kasım 2026 |
+| **Son Sürüm** | `2.3.6` — 18 Kasım 2026 |
+
+---
+
+<a id="v2-3-6"></a>
+## 2.3.6 — 18 Kasım 2026
+
+### Eklenenler
+- AI Browser Close Beta'dan çıkarıldı
+- Şarkı Sözleri çevirme özelliği eklendi
+- Tasarımsal güncellemeler
+- AI Haber çekme çok daha hızlandırıldı.
 
 ---
 
@@ -571,6 +582,7 @@
 =======
 - Çeşitli küçük düzenlemeler yapıldı.
 >>>>>>> d7a3c5a0d7fee5984c4f72e8dfd5efe628e4c987
+
 
 
 
