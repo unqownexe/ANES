@@ -13,15 +13,21 @@ ağ isteği yoktur; tüm planlama ANES içinde yapılır.
 ## Kurulum
 
 1. ANES'i açın: **Ayarlar > AI > Tarayıcı kontrolü**.
-2. **Kur** düğmesine basın. Bu işlem:
+2. **Kur** düğmesine basın. Eklenti klasörü yoksa ANES, GitHub'daki
+   `Widgets/AIExtension` sürümünü indirip `<anes.exe yanı>\AIExtension`
+   klasörüne çıkarır; sha256 doğrulanır. Ardından:
    - `AIExtension\native-host\com.webtelya.anes.ai.json` manifestini yazar,
    - `HKCU\Software\Google\Chrome\NativeMessagingHosts\com.webtelya.anes.ai`
-     kaydını oluşturur.
-3. **Eklenti klasörünü aç** düğmesiyle klasörü görün.
+     kaydını oluşturur,
+   - ayarlarda **klasör yolu + kopyala** ve Chrome'da yükleme adımlarını gösterir.
+3. **Eklenti klasörünü aç** düğmesiyle klasörü görün (yol **Yolu kopyala** ile
+   panoya alınabilir).
 4. Chrome > `chrome://extensions` > **Geliştirici modu** > **Paketlenmemiş öğe
-   yükle** > `AIExtension` klasörünü seçin.
+   yükle** > gösterilen klasörü seçin. Chrome, paketlenmemiş eklentilerin
+   programla yüklenmesine izin vermez; bu adım zorunludur.
 5. Eklenti kimliği sabittir: `iakcbidfjppimplgjafglfolifgdgcpm`.
    Farklı bir kimlik görürseniz yanlış klasörü yüklemişsinizdir.
+   Eklenti ANES'e bağlanınca rehber otomatik kapanır.
 
 Native host'u elle derlemek/kaydetmek için:
 
@@ -99,8 +105,9 @@ Eklenti sürümü GitHub'daki `Widgets/AIExtension/version.json` ile karşılaş
 - **Elle:** `update.bat` çift tıklanır. Ardından Chrome >
   `chrome://extensions` > **Yenile**.
 
-`native-host\bin` ve `native-host\build` güncellemeyle silinmez; native host
-gerekiyorsa `native-host\build_native_host.bat` ile ayrıca derlenir.
+`native-host\build` güncellemeyle silinmez. `native-host\bin\anes_native_host.exe`
+zip içinde gelir (ilk kurulum için); otomatik güncelleme çalışan exe'yi atlar.
+Native host'u yeniden derlemek için `native-host\build_native_host.bat` çalıştırın.
 
 ### Geliştirici: yeni sürüm yayınlama
 

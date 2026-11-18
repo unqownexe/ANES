@@ -1,8 +1,8 @@
 {
-    "lastVersion": "1.0.1",
+    "lastVersion": "1.0.2",
     "lastUpdate": "18 Kasım 2026",
-    "lastUpdTimestamp": "1794995791827",
-    "downloadLink": "https://raw.githubusercontent.com/unqownexe/ANES/refs/heads/main/Widgets/AIExtension/downloads/AIExtension-1.0.1.zip",
-    "sha256": "b7d37c5f85f244deb447a1c6c59f5f0ee0644afb67493926640a361aafc8bf00",
-    "description": "GitHub uzerinden otomatik guncelleme sistemi eklendi"
+    "lastUpdTimestamp": "1794997278912",
+    "downloadLink": "https://raw.githubusercontent.com/unqownexe/ANES/refs/heads/main/Widgets/AIExtension/downloads/AIExtension-1.0.2.zip",
+    "sha256": "a44afcea342afac024ba487cfb48b577590e2d92dc429ea2a458aa1eb0ed0557",
+    "description": "AIExtension güncellemesi"
 }

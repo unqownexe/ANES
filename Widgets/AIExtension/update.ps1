@@ -83,7 +83,8 @@ try {
     }
 
     Say "Dosyalar kopyalaniyor..."
-    robocopy $files $root /E /NFL /NDL /NJH /NJS /NP /R:3 /W:1 | Out-Null
+    # Calisan dosyalari ezme: guncelleyici kendini ve yerlesik native host exe'sini atlar.
+    robocopy $files $root /E /XF anes_native_host.exe /NFL /NDL /NJH /NJS /NP /R:3 /W:1 | Out-Null
     if ($LASTEXITCODE -ge 8) { throw ("dosyalar kopyalanamadi (robocopy " + $LASTEXITCODE + ")") }
 
     # Yerel surum bilgisi (bir sonraki karsilastirma icin).
