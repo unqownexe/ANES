@@ -1,0 +1,9 @@
+{
+  "name": "com.webtelya.anes.ai",
+  "description": "ANES Browser Agent native messaging host",
+  "path": "C:\\path\\to\\AIExtension\\native-host\\bin\\anes_native_host.exe",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://iakcbidfjppimplgjafglfolifgdgcpm/"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "ANES Browser Agent",
+    "description": "Extension name"
+  },
+  "appDescription": {
+    "message": "ANES Spotlight AI tarayıcı kontrol köprüsü",
+    "description": "Extension description"
+  }
+}

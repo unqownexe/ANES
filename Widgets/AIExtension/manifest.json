@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "ANES Browser Agent",
+  "version": "1.0.1",
+  "description": "ANES Spotlight AI browser control bridge",
+  "default_locale": "tr",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuBRsukaqWrjYJk3BBtIqr51i9U2hu1X4mgV1mrTySA2wdX8jOpVTVrjELhVu/zIgmW6nAiNectRQAJluNMV4p1brIQOij91cxdgQ7WsxvdZFtxrkb8fd1TyjfQruPODH9pIY2KQlvfOGCjv3lxQv4oqR5cqU22+D+TKgfX9G5j3wYoz5uZUgk60u7KcQqcQ93O8jYdBNzhRVzUQlxVkj2i2vBjPkJmKHlsHAc7s8SitfAh2M3PP+7j+XatcbeFQzvO+Aog9s30x2cjdcoH/BxQmxVg/QYrtlcSbsqovxiKb8pybU2NyMR8VmFV0EYBn5OZeyaT+zSFAMYjm2GWTwzQIDAQAB",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "nativeMessaging",
+    "scripting",
+    "tabs",
+    "storage",
+    "alarms",
+    "webNavigation",
+    "activeTab"
+  ],
+  "optional_permissions": ["debugger"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options/options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
