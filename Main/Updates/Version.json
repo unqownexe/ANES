@@ -1,7 +1,7 @@
 {
-    "lastVersion": "2.4.1",
+    "lastVersion": "2.4.2",
     "lastUpdate": "24 November 2026",
-    "lastUpdTimestamp": "1795551689893",
+    "lastUpdTimestamp": "1795553490353",
     "VersionDetails": {
         "1.0.0_to_1.1.6": {
             "releaseType": "Open Beta",
@@ -205,6 +205,13 @@
             "updatedAt": 1795551689893,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.4.1.exe",
             "description": "Spotify harici yerden şarkı dinlerken kolaj oluşturmada daha hızlı videoyu bulması için birkaç optimizasyon"
+        },
+        "2.4.2": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1795553490353,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.4.2.exe",
+            "description": "Spotlight AI'de \"Bugün, dün\" ile ilgili bir şey yazınca haber aratma sorunu çözüldü"
         }
     }
 }

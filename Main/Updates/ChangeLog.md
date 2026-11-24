@@ -4,7 +4,15 @@
 
 | | |
 |---|---|
-| **Son Sürüm** | `2.4.1` — 24 Kasım 2026 |
+| **Son Sürüm** | `2.4.2` — 24 Kasım 2026 |
+
+---
+
+<a id="v2-4-2"></a>
+## 2.4.2 — 24 Kasım 2026
+
+### Düzeltilenler
+- Spotlight AI'de "Bugün, dün" ile ilgili bir şey yazınca haber aratma sorunu çözüldü
 
 ---
 
@@ -607,6 +615,7 @@
 =======
 - Çeşitli küçük düzenlemeler yapıldı.
 >>>>>>> d7a3c5a0d7fee5984c4f72e8dfd5efe628e4c987
+
 
 
 
