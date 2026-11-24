@@ -457,6 +457,36 @@ async function handleAudibleTabs(msg) {
   send("audible_tabs", { ok: true, tabs: list }, msg.id);
 }
 
+// K-409: Müzik ekranı için Chrome'daki tüm açık sekmeleri listele.
+async function handleOpenTabs(msg) {
+  let tabs = [];
+  try {
+    tabs = await chrome.tabs.query({});
+  } catch (err) {
+    send("open_tabs", {
+      ok: false,
+      error: String(err && err.message || err || "tabs_query_failed")
+    }, msg.id);
+    return;
+  }
+  const list = (tabs || [])
+    .filter((t) => t && typeof t.url === "string" && /^https?:/i.test(t.url))
+    .sort((a, b) => {
+      if (a.audible !== b.audible) return a.audible ? -1 : 1;
+      if (a.active !== b.active) return a.active ? -1 : 1;
+      return (Number(b.lastAccessed) || 0) - (Number(a.lastAccessed) || 0);
+    })
+    .slice(0, 40)
+    .map((t) => ({
+      id: t.id,
+      url: t.url,
+      title: String(t.title || ""),
+      audible: t.audible === true,
+      active: t.active === true
+    }));
+  send("open_tabs", { ok: true, tabs: list }, msg.id);
+}
+
 // ------------------------------------------------------------- native olaylar
 
 async function handleNative(msg) {
@@ -496,6 +526,9 @@ async function handleNative(msg) {
       return;
     case "audible_tabs_request":
       await handleAudibleTabs(msg);
+      return;
+    case "open_tabs_request":
+      await handleOpenTabs(msg);
       return;
     case "action":
       await serialize(() => handleAction(msg));

@@ -1,7 +1,7 @@
 {
-    "lastVersion": "2.4.0",
+    "lastVersion": "2.4.1",
     "lastUpdate": "24 November 2026",
-    "lastUpdTimestamp": "1795548302544",
+    "lastUpdTimestamp": "1795551689893",
     "VersionDetails": {
         "1.0.0_to_1.1.6": {
             "releaseType": "Open Beta",
@@ -198,6 +198,13 @@
             "updatedAt": 1795548302544,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.4.0.exe",
             "description": "Detaylı Güncelleme + Telefon Entegrasyonu"
+        },
+        "2.4.1": {
+            "releaseType": "Stable",
+            "mandatory": false,
+            "updatedAt": 1795551689893,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.4.1.exe",
+            "description": "Spotify harici yerden şarkı dinlerken kolaj oluşturmada daha hızlı videoyu bulması için birkaç optimizasyon"
         }
     }
 }

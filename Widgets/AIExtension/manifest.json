@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ANES Browser Agent",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ANES Spotlight AI browser control bridge",
   "default_locale": "tr",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuBRsukaqWrjYJk3BBtIqr51i9U2hu1X4mgV1mrTySA2wdX8jOpVTVrjELhVu/zIgmW6nAiNectRQAJluNMV4p1brIQOij91cxdgQ7WsxvdZFtxrkb8fd1TyjfQruPODH9pIY2KQlvfOGCjv3lxQv4oqR5cqU22+D+TKgfX9G5j3wYoz5uZUgk60u7KcQqcQ93O8jYdBNzhRVzUQlxVkj2i2vBjPkJmKHlsHAc7s8SitfAh2M3PP+7j+XatcbeFQzvO+Aog9s30x2cjdcoH/BxQmxVg/QYrtlcSbsqovxiKb8pybU2NyMR8VmFV0EYBn5OZeyaT+zSFAMYjm2GWTwzQIDAQAB",

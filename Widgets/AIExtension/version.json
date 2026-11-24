@@ -1,8 +1,8 @@
 {
-    "lastVersion": "1.0.2",
-    "lastUpdate": "18 Kasım 2026",
-    "lastUpdTimestamp": "1794997278912",
-    "downloadLink": "https://raw.githubusercontent.com/unqownexe/ANES/refs/heads/main/Widgets/AIExtension/downloads/AIExtension-1.0.2.zip",
-    "sha256": "a44afcea342afac024ba487cfb48b577590e2d92dc429ea2a458aa1eb0ed0557",
-    "description": "AIExtension güncellemesi"
+    "lastVersion": "1.0.3",
+    "lastUpdate": "24 Kasım 2026",
+    "lastUpdTimestamp": "1795551659905",
+    "downloadLink": "https://raw.githubusercontent.com/unqownexe/ANES/refs/heads/main/Widgets/AIExtension/downloads/AIExtension-1.0.3.zip",
+    "sha256": "1b99eafdebe9c759d1bbdb627d51007edf5af47a370f41537ec72fc34fb1ab31",
+    "description": "Spotify harici yerden şarkı dinlerken kolaj oluşturmada daha hızlı videoyu bulması için birkaç optimizasyon"
 }
