@@ -1,0 +1,14 @@
+{
+    "lastVersion":  "1.1.0",
+    "lastUpdate":  "24 November 2026",
+    "lastUpdTimestamp":  "1795548181737",
+    "VersionDetails":  {
+                           "1.1.0":  {
+                                         "mandatory":  true,
+                                         "updatedAt":  1795548181737,
+                                         "releaseType":  "Stable",
+                                         "downloadLink":  "https://github.com/unqownexe/ANES/raw/refs/heads/main/Phone/Downloads/ANESPhone-1.1.0.apk",
+                                         "description":  "First Release"
+                                     }
+                       }
+}

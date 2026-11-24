@@ -4,7 +4,24 @@
 
 | | |
 |---|---|
-| **Son Sürüm** | `2.3.6` — 18 Kasım 2026 |
+| **Son Sürüm** | `2.4.0` — 24 Kasım 2026 |
+
+---
+
+<a id="v2-4-0"></a>
+## 2.4.0 — 24 Kasım 2026
+
+### Eklenen, Değiştirilen, Düzeltilen
+- Ayarlar küçük ekranda sol taraf scroll olmuyordu - Sorun çözüldü
+- Ayarlar > Hakkında > Include beta releases'e tıklanmıyordu - Sorun çözüldü
+- Ayarlar > Hakkında > ChangeLog tam markdown desteklemiyordu - Sorun çözüldü
+- Ayarların tasarımı biraz daha iyileştirildi
+- Telefon Entegrasyonu eklendi
+- Kapalı çentikteyen çentiğin büyük kalma sorunu çözüldü - Sanırım.
+- Spotify harici yerlerden şarkı dinlerken kolaj oluşturma algoritması çok daha iyileştirildi.
+- Bass, kick algılama biraz daha geliştirildi
+- Telefon Galerisi geliştirildi
+- Spotlight AI tarafında ufak bir hata giderildi
 
 ---
 
@@ -582,6 +599,7 @@
 =======
 - Çeşitli küçük düzenlemeler yapıldı.
 >>>>>>> d7a3c5a0d7fee5984c4f72e8dfd5efe628e4c987
+
 
 
 
