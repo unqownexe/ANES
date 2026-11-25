@@ -6,7 +6,7 @@ ANES ile ihtiyacın olan her şey elinin altında. Video indir, müzik dinle, ya
 
 ### Tanıtım
 
-[![ANES Tanıtım Videosu](https://img.youtube.com/vi/c6XvJSs2g0c/maxresdefault.jpg)](https://www.youtube.com/watch?v=c6XvJSs2g0c)
+[![ANES Tanıtım Videosu](https://img.youtube.com/vi/CILnMwDFt8Q/maxresdefault.jpg)](https://www.youtube.com/watch?v=CILnMwDFt8Q)
 
 <sub>ANES'in kullanımını görmek için videoya tıkla.</sub>
 
