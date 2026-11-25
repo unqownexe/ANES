@@ -1,7 +1,7 @@
 {
-    "lastVersion": "2.4.3",
+    "lastVersion": "2.4.4",
     "lastUpdate": "25 November 2026",
-    "lastUpdTimestamp": "1795603678007",
+    "lastUpdTimestamp": "1795605392737",
     "VersionDetails": {
         "1.0.0_to_1.1.6": {
             "releaseType": "Open Beta",
@@ -219,6 +219,13 @@
             "updatedAt": 1795603678007,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.4.3.exe",
             "description": "Telefondan medya entegrasyonu eklendi"
+        },
+        "2.4.4": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1795605392737,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.4.4.exe",
+            "description": "Telefon Galeri kısmında bilinen hatalar giderildi ve galeriye özel sağ tık menüsü eklendi"
         }
     }
 }
