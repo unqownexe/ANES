@@ -4,7 +4,15 @@
 
 | | |
 |---|---|
-| **Son Sürüm** | `2.4.2` — 24 Kasım 2026 |
+| **Son Sürüm** | `2.4.3` — 25 Kasım 2026 |
+
+---
+
+<a id="v2-4-3"></a>
+## 2.4.3 — 25 Kasım 2026
+
+### Eklenenler
+- Telefondan medya entegrasyonu eklendi
 
 ---
 
@@ -615,6 +623,7 @@
 =======
 - Çeşitli küçük düzenlemeler yapıldı.
 >>>>>>> d7a3c5a0d7fee5984c4f72e8dfd5efe628e4c987
+
 
 
 

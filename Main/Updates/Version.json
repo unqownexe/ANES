@@ -1,7 +1,7 @@
 {
-    "lastVersion": "2.4.2",
-    "lastUpdate": "24 November 2026",
-    "lastUpdTimestamp": "1795553490353",
+    "lastVersion": "2.4.3",
+    "lastUpdate": "25 November 2026",
+    "lastUpdTimestamp": "1795603678007",
     "VersionDetails": {
         "1.0.0_to_1.1.6": {
             "releaseType": "Open Beta",
@@ -212,6 +212,13 @@
             "updatedAt": 1795553490353,
             "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.4.2.exe",
             "description": "Spotlight AI'de \"Bugün, dün\" ile ilgili bir şey yazınca haber aratma sorunu çözüldü"
+        },
+        "2.4.3": {
+            "releaseType": "Stable",
+            "mandatory": true,
+            "updatedAt": 1795603678007,
+            "downloadLink": "https://github.com/unqownexe/ANES/raw/refs/heads/main/Main/Updates/Downloads/Webtelya-ANES-Setup-2.4.3.exe",
+            "description": "Telefondan medya entegrasyonu eklendi"
         }
     }
 }
