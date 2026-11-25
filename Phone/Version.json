@@ -1,7 +1,7 @@
 {
-    "lastVersion":  "1.2.0",
+    "lastVersion":  "1.2.1",
     "lastUpdate":  "25 November 2026",
-    "lastUpdTimestamp":  "1795603632602",
+    "lastUpdTimestamp":  "1795605617697",
     "VersionDetails":  {
                            "1.1.0":  {
                                          "mandatory":  true,
@@ -16,6 +16,13 @@
                                          "releaseType":  "Stable",
                                          "downloadLink":  "https://github.com/unqownexe/ANES/raw/refs/heads/main/Phone/Downloads/ANESPhone-1.2.0.apk",
                                          "description":  "PC ANES Medya entegrasyonu eklendi"
+                                     },
+                           "1.2.1":  {
+                                         "mandatory":  true,
+                                         "updatedAt":  1795605617697,
+                                         "releaseType":  "Stable",
+                                         "downloadLink":  "https://github.com/unqownexe/ANES/raw/refs/heads/main/Phone/Downloads/ANESPhone-1.2.1.apk",
+                                         "description":  "Hakkında \u003e Sürüm artık sabit 1.0 değil; Farklı bir oturumdayken arkadaki noktalar başka bir oturumdan geçiyordu - çözüldü.."
                                      }
                        }
 }

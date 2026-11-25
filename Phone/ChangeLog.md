@@ -4,7 +4,14 @@
 
 | | |
 |---|---|
-| **Son Surum** | `1.2.0` — 25 November 2026 |
+| **Son Surum** | `1.2.1` — 25 November 2026 |
+
+---
+
+## 1.2.1 — 25 November 2026
+
+- Hakkında > Sürüm artık sabit 1.0 değil
+- Farklı bir oturumdayken arkadaki noktalar başka bir oturumdan geçiyordu - çözüldü..
 
 ---
 
@@ -17,5 +24,6 @@
 ## 1.1.0 — 24 November 2026
 
 - First Release
+
 
 
